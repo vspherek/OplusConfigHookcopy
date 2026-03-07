@@ -10,7 +10,7 @@
     <string name="free_notice_title">这是一个免费开源软件</string>
     <string name="free_notice_message">这份奇迹与魔法是免费的，如果你花了钱那你上当了！</string>
     <string name="open_project_homepage">项目主页</string>
-    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+    <string name="project_homepage_url">https://github.com/AstorBlithe/OplusConfigHook</string>
 
     <string name="enable_replacement">启用替换</string>
     <string name="enable_autostart_replacement">启用自启替换</string>
