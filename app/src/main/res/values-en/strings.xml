@@ -8,7 +8,7 @@
     <string name="free_notice_title">This is free open-source software</string>
     <string name="free_notice_message">This little miracle is free. If you paid for it, you got scammed.</string>
     <string name="open_project_homepage">Project homepage</string>
-    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+    <string name="project_homepage_url">https://github.com/AstorBlithe/OplusConfigHook</string>
 
     <string name="enable_replacement">Enable replacement</string>
     <string name="enable_autostart_replacement">Enable autostart replacement</string>
