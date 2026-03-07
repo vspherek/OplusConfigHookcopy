@@ -8,7 +8,7 @@
     <string name="free_notice_title">これは無料のオープンソースソフトです</string>
     <string name="free_notice_message">この奇跡と魔法は無料です。もしお金を払ったなら、だまされています！</string>
     <string name="open_project_homepage">プロジェクトページ</string>
-    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+    <string name="project_homepage_url">https://github.com/AstorBlithe/OplusConfigHook</string>
 
     <string name="enable_replacement">置き換えを有効化</string>
     <string name="enable_autostart_replacement">自動起動置き換えを有効化</string>
