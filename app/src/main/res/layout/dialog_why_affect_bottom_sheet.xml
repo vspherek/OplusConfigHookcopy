@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:paddingStart="@dimen/space_5"
+    android:paddingEnd="@dimen/space_5"
+    android:paddingTop="@dimen/space_5"
+    android:paddingBottom="@dimen/space_4">
+
+    <TextView
+        android:id="@+id/tvWhyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="6dp"
+        android:maxLines="3"
+        android:text="@string/why_affect_my_app"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="@dimen/space_3"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/why_affect_key_points"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+            <TextView
+                android:id="@+id/tvWhyBullet1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:lineSpacingExtra="8dp"
+                android:maxLines="4"
+                android:text="@string/why_affect_point_1"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvWhyBullet2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:lineSpacingExtra="8dp"
+                android:maxLines="4"
+                android:text="@string/why_affect_point_2"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvWhyBullet3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:lineSpacingExtra="8dp"
+                android:maxLines="4"
+                android:text="@string/why_affect_point_3"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:lineSpacingExtra="6dp"
+                android:text="@string/why_affect_jump"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+            <TextView
+                android:id="@+id/itemOpenInspector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="@dimen/min_touch_target"
+                android:padding="@dimen/space_3"
+                android:text="@string/why_affect_open_inspector"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/itemOpenRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="@dimen/min_touch_target"
+                android:padding="@dimen/space_3"
+                android:text="@string/why_affect_open_package_rules"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWhyConfirm"
+        style="@style/Widget.OplusConfigHook.Button.FullWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_3"
+        android:text="@string/confirm_stage" />
+
+</LinearLayout>

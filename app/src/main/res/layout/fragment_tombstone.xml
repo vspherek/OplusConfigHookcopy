@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutTombstone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorFullWidth="false" />
+
+    <LinearLayout
+        android:id="@+id/tombstoneHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/section_content_padding"
+        android:paddingTop="@dimen/space_3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTombstoneSource"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="2"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInspector"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_3"
+                    android:maxLines="2"
+                    android:minHeight="@dimen/min_touch_target"
+                    android:text="@string/tombstone_inspector" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApplyTombstone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:maxLines="2"
+                android:text="@string/apply_policy" />
+
+            <TextView
+                android:id="@+id/tvDirtyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="3"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:visibility="gone" />
+
+
+            
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tombstoneBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="?attr/colorSurface">
+
+        <ScrollView
+            android:id="@+id/scrollRecommended"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/section_content_padding"
+                android:paddingTop="@dimen/space_3"
+                android:paddingBottom="@dimen/space_5">
+                <LinearLayout
+                    android:id="@+id/sectionRecommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/module_fast_freeze_title"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:text="@string/module_fast_freeze_desc"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody" />
+
+                        <TextView
+                            android:id="@+id/tvFastFreezeSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_3"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnFastFreezeConfig"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_config" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnFastFreezeAdvanced"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_2"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_advanced" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/module_whitelist_title"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:text="@string/module_whitelist_desc"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody" />
+
+                        <TextView
+                            android:id="@+id/tvWhitelistSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/donot_freeze_friendly" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEditDoNotFreeze"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/edit" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_3"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnWhitelistConfig"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_config" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnWhitelistAdvanced"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_2"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_advanced" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/module_sys_black_title"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:text="@string/module_sys_black_desc"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody" />
+
+                        <TextView
+                            android:id="@+id/tvSysBlackSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnQuickSuppress"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_3"
+                            android:text="@string/quick_suppress"
+                            app:icon="@drawable/ic_quick_suppress"
+                            app:iconGravity="textStart"
+                            app:iconPadding="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/scene_lcdon"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEditLcdOn"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/edit" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/scene_lcdoff"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEditLcdOff"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/edit" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/scene_night"/>
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEditNight"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/edit" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_3"
+                            android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnSysBlackConfig"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_config" />
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnSysBlackAdvanced"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_2"
+                                android:layout_weight="1"
+                                android:text="@string/module_action_advanced" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_proxy_title" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:text="@string/module_proxy_desc" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody"/>
+                        <TextView android:id="@+id/tvProxySummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnProxyConfig" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/module_action_config"/>
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnProxyAdvanced" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/space_2" android:layout_weight="1" android:text="@string/module_action_advanced"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_bump_title" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:text="@string/module_bump_desc" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody"/>
+                        <TextView android:id="@+id/tvBumpSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnQuickKeepAlive" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3" android:text="@string/quick_keep_alive" app:icon="@drawable/ic_quick_keep_alive" app:iconGravity="textStart" app:iconPadding="12dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBumpConfig" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/module_action_config"/>
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnBumpAdvanced" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/space_2" android:layout_weight="1" android:text="@string/module_action_advanced"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_3"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/module_high_load_title" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:text="@string/module_high_load_desc" android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionBody"/>
+                        <TextView android:id="@+id/tvHighLoadSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2" android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3" android:orientation="horizontal">
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnHighLoadConfig" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/module_action_config"/>
+                            <com.google.android.material.button.MaterialButton android:id="@+id/btnHighLoadAdvanced" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/space_2" android:layout_weight="1" android:text="@string/module_action_advanced"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tombstone_actions_title"
+                            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnImportTombstone"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_3"
+                            android:maxLines="2"
+                            android:text="@string/import_xml" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnExportTombstone"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:maxLines="2"
+                            android:text="@string/export_policy" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRestoreTombstone"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:maxLines="2"
+                            android:text="@string/restore_default" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scrollAdvanced"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/section_content_padding"
+                android:paddingTop="@dimen/space_3"
+                android:paddingBottom="@dimen/space_5">
+                <LinearLayout
+                    android:id="@+id/sectionAdvanced"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_3"
+                    android:text="@string/freeze_timing"
+                    android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                <LinearLayout
+                    android:id="@+id/timeParamContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:text="@string/special_handling"
+                    android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    style="@style/Widget.OplusConfigHook.SectionCard"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/card_content_padding">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:lineSpacingExtra="3dp"
+                                android:text="@string/freeze_allow_friendly" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnEditAllow"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_3"
+                                android:maxLines="2"
+                                android:text="@string/edit" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/specialLowContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/specialMediumContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/specialHighContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:orientation="vertical" />
+
+
+
+                <TextView
+                    android:id="@+id/tvProxySectionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:text="@string/proxy_section_title"
+                    android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                <LinearLayout
+                    android:id="@+id/proxyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:text="@string/scene_params_editable"
+                    android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+                <LinearLayout
+                    android:id="@+id/policyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:orientation="vertical" />
+            </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

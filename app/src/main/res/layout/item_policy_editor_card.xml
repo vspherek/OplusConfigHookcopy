@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.OplusConfigHook.SectionCard"
+    app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_3"
+    android:layout_marginBottom="@dimen/space_3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_content_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvPolicySceneTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="3"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall" />
+
+            <ImageButton
+                android:id="@+id/btnPolicyNameInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="policy scene info"
+                android:src="@drawable/ic_info_md" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetPolicyScene"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch_target"
+                android:maxLines="2"
+                android:text="@string/reset_scene" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:text="name"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+        <TextView
+            android:id="@+id/tvPolicyNameValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_1"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge" />
+
+        <LinearLayout
+            android:id="@+id/rowScene"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="scene"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                <ImageButton
+                    android:id="@+id/btnSceneInfo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="scene info"
+                    android:src="@drawable/ic_info_md" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSceneValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowMask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="mask"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                <ImageButton
+                    android:id="@+id/btnMaskInfo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="mask info"
+                    android:src="@drawable/ic_info_md" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMaskValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowQuota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="quota"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                <ImageButton
+                    android:id="@+id/btnQuotaInfo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="quota info"
+                    android:src="@drawable/ic_info_md" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etQuotaValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowBgMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="bgMode"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+                <ImageButton
+                    android:id="@+id/btnBgModeInfo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="bgMode info"
+                    android:src="@drawable/ic_info_md" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBgModeValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowFgsExempt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="fgsExempt"
+                android:textAppearance="@style/TextAppearance.Material3.LabelMedium" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchFgsExempt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/min_touch_target" />
+
+            <ImageButton
+                android:id="@+id/btnFgsInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="fgs info"
+                android:src="@drawable/ic_info_md" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

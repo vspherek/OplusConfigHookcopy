@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/section_content_padding">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:maxLines="3"
+            android:text="@string/free_notice_message"
+            android:textAppearance="@style/TextAppearance.Material3.TitleSmall" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/settings_basic_group"
+            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbMaster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/enable_replacement" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbAutostart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/enable_autostart_replacement" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbTombstone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/enable_tombstone_replacement" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbAllowAndroidFsHook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_android_fs_hook" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbDebugForceMaster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/debug_force_master" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCleanupSystemState"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cleanup_system_state_button" />
+
+        <TextView
+            android:id="@+id/tvCleanupHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:paddingTop="@dimen/space_2"
+            android:text="@string/cleanup_system_state_hint"
+            android:textSize="12sp" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbAdvancedPolicyEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/advanced_editing" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/settings_experiments_group"
+            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPhonemanagerReadconfigObserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_pm_readconfig_observe" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPhonemanagerReadconfigModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_pm_readconfig_modify" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbPhonemanagerFsHook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_pm_fs_hook" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbSafecenterReadconfigObserve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_sc_readconfig_observe" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbSafecenterReadconfigModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_sc_readconfig_modify" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbSafecenterFsHook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/allow_sc_fs_hook" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/settings_diag_group"
+            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_2"
+            android:background="?attr/colorSurfaceContainerLow">
+
+            <TextView
+                android:id="@+id/tvHookConfigSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvHookMasterResolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvHookAutostartResolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvHookTombstoneResolved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <TextView
+                android:id="@+id/tvHookUserFact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/settings_tools_group"
+            android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbLogOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/log_only_matches" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbLogStack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_touch_target"
+            android:text="@string/log_stack" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_2"
+            android:orientation="vertical"
+            android:padding="@dimen/space_2"
+            android:background="?attr/colorSurfaceContainerLow">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:text="@string/about_section_title"
+                android:textAppearance="@style/TextAppearance.OplusConfigHook.SectionTitle" />
+
+            <TextView
+                android:id="@+id/tvAboutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_1"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDonation"
+                style="@style/Widget.OplusConfigHook.Button.FullWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/donation_entry" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOpenProject"
+                style="@style/Widget.OplusConfigHook.Button.OutlinedFullWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/open_project_homepage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExportLogs"
+                style="@style/Widget.OplusConfigHook.Button.OutlinedFullWidth"
+                android:layout_height="wrap_content"
+                android:text="@string/export_logs" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCopyCrash"
+                style="@style/Widget.OplusConfigHook.Button.OutlinedFullWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2"
+                android:text="@string/copy_last_crash" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

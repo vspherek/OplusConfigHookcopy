@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_tombstone" android:icon="@drawable/ic_nav_placeholder_1" android:title="@string/tab_tombstone"/>
+    <item android:id="@+id/nav_autostart" android:icon="@drawable/ic_nav_placeholder_2" android:title="@string/tab_autostart"/>
+    <item android:id="@+id/nav_settings" android:icon="@drawable/ic_nav_placeholder_3" android:title="@string/tab_settings"/>
+</menu>

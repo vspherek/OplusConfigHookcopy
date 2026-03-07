@@ -1,0 +1,538 @@
+<resources>
+    <string name="app_name">OplusConfigHook</string>
+    <string name="tab_tombstone">Freeze policy (background)</string>
+    <string name="tab_autostart">Autostart</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="image_placeholder">Placeholder image</string>
+    <string name="free_notice_title">This is free open-source software</string>
+    <string name="free_notice_message">This little miracle is free. If you paid for it, you got scammed.</string>
+    <string name="open_project_homepage">Project homepage</string>
+    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+
+    <string name="enable_replacement">Enable replacement</string>
+    <string name="enable_autostart_replacement">Enable autostart replacement</string>
+    <string name="enable_tombstone_replacement">Enable freeze-policy replacement</string>
+    <string name="allow_android_fs_hook">Allow Android process FS hook (high risk)</string>
+    <string name="debug_force_master">Debug: force master=true (temporary)</string>
+    <string name="log_stack">Log stacktrace</string>
+    <string name="log_only_matches">Log only matched keys</string>
+
+    <string name="autostart_policy_desc">Edit autostart white list (one package name per line in txt).</string>
+    <string name="tombstone_policy_desc">Edit freeze-policy lists and scenario blacklists safely.</string>
+    <string name="current_source_value">Current source: %1$s</string>
+    <string name="source_user">User policy</string>
+    <string name="source_asset">Built-in default</string>
+
+    <string name="import_txt">Import txt</string>
+    <string name="import_xml">Import xml</string>
+    <string name="export_policy">Export</string>
+    <string name="apply_policy">Apply policy</string>
+    <string name="restore_default">Restore default</string>
+    <string name="edit_by_checked_apps">Modify by selected apps</string>
+    <string name="staged_not_applied">Staged only, not applied yet.</string>
+
+    <string name="import_failed">Import failed</string>
+    <string name="import_failed_reason">Import failed: %1$s</string>
+    <string name="export_failed_reason">Operation failed: %1$s</string>
+    <string name="export_success">Export completed</string>
+    <string name="autostart_invalid">Autostart file is empty or comments only.</string>
+    <string name="policy_applied">Policy applied and cache refreshed.</string>
+
+    <string name="scene_params_readonly">Scene parameters (read-only, advanced users only)</string>
+    <string name="scene_blacklist_title">Apps to freeze by scene</string>
+    <string name="scene_count_value">%1$d apps</string>
+    <string name="global_whitelist_title">Global priority &amp; exemptions</string>
+    <string name="freeze_allow_friendly">Startup freeze-chain whitelist (advanced)
+Only affects specific startup/freeze-chain rules, not global do-not-freeze or persistent keep-alive.</string>
+    <string name="donot_freeze_friendly">Do not freeze (dex2oat chain exemption only; not global keep-alive). More likely to stay resident and skip freeze. Use carefully.</string>
+    <string name="more">More</string>
+    <string name="edit">Edit</string>
+
+    <string name="search_apps_hint">Search app name or package</string>
+    <string name="system_app">System app</string>
+    <string name="add">Add</string>
+    <string name="confirm_stage">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="donation_entry">Donation support</string>
+    <string name="donation_qr_title">Donation QR code</string>
+    <string name="wallet_address_label">Wallet address</string>
+    <string name="wallet_eth_address">0x1234567890ABCDEF1234567890ABCDEF12345678</string>
+    <string name="copy">Copy</string>
+    <string name="share">Share</string>
+    <string name="wallet_copy_success">Address copied</string>
+    <string name="wallet_share_text">Support the project: %1$s</string>
+    <string name="wallet_share_chooser">Share wallet address</string>
+    <string name="donation_security_notice">Please verify the address source to avoid phishing.</string>
+
+    <string name="scene_params_editable">Scenario parameters (Risky — enable Advanced editing in Settings)</string>
+    <string name="reset_scene">Reset to default</string>
+    <string name="modified_not_applied">Modified but not applied.</string>
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="filter_all_apps">All apps</string>
+    <string name="filter_user_apps">User apps only</string>
+    <string name="filter_system_apps">System apps only</string>
+    <string name="filter_state_value">Filter: %1$s</string>
+    <string name="sort_by_label">Sort by app name</string>
+    <string name="sort_by_package">Sort by package name</string>
+    <string name="sort_by_install_time">Sort by install time</string>
+    <string name="sort_by_update_time">Sort by update time</string>
+    <string name="sort_descending">Descending</string>
+    <string name="tombstone_param_scene_title">About scene</string>
+    <string name="tombstone_param_scene_body">The scene value identifies different system states such as screen on, screen off, night mode, or charging.
+It is normally predefined by the system and should not be modified unless you understand its purpose.
+
+Incorrect values may cause the policy to malfunction.</string>
+    <string name="tombstone_param_mask_title">About mask</string>
+    <string name="tombstone_param_mask_body">The mask is a bitmask that controls which policy rules are enabled.
+Its meaning may vary across ROM versions and is often represented as a binary or numeric combination.
+
+It is recommended to keep the default value unless you know what you are doing.</string>
+    <string name="tombstone_param_quota_title">About quota</string>
+    <string name="tombstone_param_quota_body">Quota represents a threshold or limit that may influence how often background freezing is triggered.
+
+Higher values may reduce restriction frequency,
+while lower values may make apps more likely to be limited.</string>
+    <string name="tombstone_param_bgmode_title">About bgMode</string>
+    <string name="tombstone_param_bgmode_body">bgMode indicates the background policy mode used by the system.
+The exact meaning depends on internal ROM implementation.
+
+Changing it may affect background survival or battery consumption.</string>
+    <string name="tombstone_param_fgsexempt_title">About fgsExempt</string>
+    <string name="tombstone_param_fgsexempt_body">fgsExempt controls whether foreground service processes receive additional exemptions.
+
+Enabling it may improve background persistence,
+but could also increase battery usage.</string>
+    <string name="tombstone_param_risk_notice">⚠ Modifying these parameters may cause abnormal behavior or increased battery usage. Proceed at your own risk.</string>
+    <string name="tombstone_param_dialog_ok">Got it</string>
+
+    <string name="advanced_policy_edit">Enable Advanced editing (high risk)</string>
+    <string name="policy_group_sys_black_policy">Policy params (SysBlackPolicy)</string>
+    <string name="policy_group_sys_black_restrict">Restrict mask (SysBlackRestrictMask)</string>
+    <string name="app_picker_loading_apps">Loading app list...</string>
+    <string name="app_picker_load_failed">Failed to load app list.</string>
+    <string name="filter_checked_all">All</string>
+    <string name="filter_checked_only">Checked</string>
+    <string name="filter_unchecked_only">Unchecked</string>
+    <string name="enable_advanced_editing_hint">Enable Advanced editing in Settings to modify this field.</string>
+    <string name="tombstone_freeze_help">This page controls background freeze policy. Changes may affect notifications, background tasks, and battery behavior. Use at your own risk.</string>
+    <string name="scene_info_lcdon_title">lcdon</string>
+    <string name="scene_info_lcdon_body">Inferred from naming and common power-management semantics: parameters under lcdon may apply when the screen is on. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_lcdoff_title">lcdoff</string>
+    <string name="scene_info_lcdoff_body">Inferred from naming and common power-management semantics: parameters under lcdoff may apply when the screen is off. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_night_title">night</string>
+    <string name="scene_info_night_body">Inferred from naming and common power-management semantics: parameters under night may apply during night/sleep schedules. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_charging_title">charging</string>
+    <string name="scene_info_charging_body">Inferred from naming and common power-management semantics: parameters under charging may apply while charging. Vendor behavior may be more aggressive or conservative. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_extremefg_title">extremeFg</string>
+    <string name="scene_info_extremefg_body">Inferred from naming and common power-management semantics: extremeFg may represent a foreground-intensive grouping. It may enforce stricter or looser handling for active apps. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_fastfreeze_title">fastFreeze</string>
+    <string name="scene_info_fastfreeze_body">Inferred from naming and common power-management semantics: fastFreeze may shorten delay and enter freezing faster. Actual behavior depends on the system implementation.</string>
+    <string name="scene_info_minsystem_title">minSystem</string>
+    <string name="scene_info_minsystem_body">Inferred from naming and common power-management semantics: minSystem may represent a lower bound for protecting critical system components from freezing. Actual behavior depends on the system implementation.</string>
+    <string name="tombstone_title">Freeze policy (background)</string>
+    <string name="reset_default">Reset to default</string>
+    <string name="advanced_editing">Advanced editing</string>
+    <string name="advanced_editing_desc">Enable editing of raw values. Incorrect values may affect notifications and background tasks.</string>
+    <string name="advanced_editing_required">Enable Advanced editing in Settings to modify this value.</string>
+    <string name="unit_ms">ms</string>
+    <string name="unit_s">s</string>
+    <string name="unit_raw">raw</string>
+    <string name="approx_prefix">≈</string>
+    <string name="unit_example_hint">Example conversion (reference only)</string>
+    <string name="unit_unknown_hint">Unit is unclear for this field; the system may interpret it differently.</string>
+    <string name="scenario_params_risky">Scenario parameters (Risky — enable Advanced editing in Settings)</string>
+    <string name="hint_inference_disclaimer">This explanation is inferred from field names and common power-management behavior. Actual behavior depends on the ROM implementation.</string>
+    <string name="hint_lcdon">Applies when the screen is on. Often affects delays or checks before freezing.</string>
+    <string name="hint_lcdoff">Applies when the screen is off. Often more aggressive and may freeze sooner.</string>
+    <string name="hint_night">Applies during a night/sleep period. May be tied to scheduled power policies.</string>
+    <string name="hint_charging">Applies while charging. The ROM may choose different freeze aggressiveness.</string>
+    <string name="hint_extremefg">"Extreme foreground" condition/group. May change how foreground/active apps are handled.</string>
+    <string name="hint_fastfreeze">Faster freezing path. May reduce the delay before an app is frozen.</string>
+    <string name="hint_minsystem">System minimum protection/whitelist threshold. May prevent key system components from being frozen.</string>
+    <string name="unit_example_both">If interpreted as ms: %1$s ≈ %2$s s. If interpreted as s: %1$s ≈ %3$s h.</string>
+    <string name="invalid_number_value">Invalid numeric value: %1$s</string>
+    <string name="large_value_risk_hint">Large values detected. Please verify units and behavior before applying.</string>
+    <string name="field_lcdOff_ffInterval">lcdOffConfig.ffInterval</string>
+    <string name="field_tip_lcdOff_ffInterval">Fast-freeze interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_interval">lcdOffConfig.interval</string>
+    <string name="field_tip_lcdOff_interval">Regular interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_ffTotal">lcdOffConfig.ffTotal</string>
+    <string name="field_tip_lcdOff_ffTotal">Total FF count (not a time field).</string>
+    <string name="field_lcdOn_RToM">lcdOnConfig.RToM</string>
+    <string name="field_tip_lcdOn_RToM">RToM transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_MToF">lcdOnConfig.MToF</string>
+    <string name="field_tip_lcdOn_MToF">MToF transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_checkImportance">lcdOnConfig.checkImportance</string>
+    <string name="field_tip_lcdOn_checkImportance">Importance check interval in lcdOnConfig.</string>
+    <string name="field_ff_enterTimeout">ffConfig.enterTimeout</string>
+    <string name="field_tip_ff_enterTimeout">Fast-freeze enter timeout.</string>
+    <string name="field_ff_interval">ffConfig.interval</string>
+    <string name="field_tip_ff_interval">Fast-freeze interval.</string>
+    <string name="field_ff_maxFzNum">ffConfig.maxFzNum</string>
+    <string name="field_tip_ff_maxFzNum">Maximum freeze count (not a time field).</string>
+    <string name="field_powerSave_repeatTime">powerSaveConfig.repeatTime</string>
+    <string name="field_tip_powerSave_repeatTime">Power save repeat time.</string>
+    <string name="field_traffic_interval">trafficConfig.interval</string>
+    <string name="field_tip_traffic_interval">Traffic check interval.</string>
+    <string name="field_traffic_unfreeze">trafficConfig.trafficUnfreezeTime</string>
+    <string name="field_tip_traffic_unfreeze">Unfreeze duration for traffic condition.</string>
+    <string name="field_api_upper">ApiTimeoutConfig.upperTimeout</string>
+    <string name="field_tip_api_upper">Upper API timeout.</string>
+    <string name="field_api_floor">ApiTimeoutConfig.floorTimeout</string>
+    <string name="field_tip_api_floor">Lower API timeout.</string>
+    <string name="field_query_interval">queryUsageStatsConfig.queryIntervalTime</string>
+    <string name="field_tip_query_interval">Usage stats query interval.</string>
+    <string name="field_query_messageDelay">queryUsageStatsConfig.messageDelayTime</string>
+    <string name="field_tip_query_messageDelay">Message delay time.</string>
+    <string name="field_query_repeatCount">queryUsageStatsConfig.messageRepeateCount</string>
+    <string name="field_tip_query_repeatCount">Message repeat count (not a time field).</string>
+    <string name="field_forceProxy_gpsInterval">screenOffStillForceProxyConfig.gpsInterval</string>
+    <string name="field_tip_forceProxy_gpsInterval">GPS interval for screen-off still force-proxy config.</string>
+    <string name="field_forceProxy_defaultInterval">screenOffStillForceProxyConfig.defaultInterval</string>
+    <string name="field_tip_forceProxy_defaultInterval">Default interval for screen-off still force-proxy config.</string>
+    <string name="field_freeze_guardTime">freezeInterval.guardTime</string>
+    <string name="field_tip_freeze_guardTime">Guard time in freezeInterval.</string>
+    <string name="field_freeze_RToM">freezeInterval.RToM</string>
+    <string name="field_tip_freeze_RToM">RToM transition in freezeInterval.</string>
+    <string name="field_freeze_RToMST">freezeInterval.RToMST</string>
+    <string name="field_tip_freeze_RToMST">RToMST transition in freezeInterval.</string>
+    <string name="field_freeze_MToF">freezeInterval.MToF</string>
+    <string name="field_tip_freeze_MToF">MToF transition in freezeInterval.</string>
+    <string name="field_freeze_MToFST">freezeInterval.MToFST</string>
+    <string name="field_tip_freeze_MToFST">MToFST transition in freezeInterval.</string>
+    <string name="field_freeze_checkImportance">freezeInterval.checkImportance</string>
+    <string name="field_tip_freeze_checkImportance">Importance check interval in freezeInterval.</string>
+    <string name="restore">Restore</string>
+    <string name="inspector_empty_hint">Choose an app to inspect</string>
+    <string name="freeze_timing_hint_once">Values use milliseconds (ms).</string>
+    <string name="why_affect_my_app">Why does this affect my app?</string>
+    <string name="why_affect_my_app_body">appType=4 is mapped to net in appTypeConfig, but app classification is done at runtime by the ROM. XML does not provide explicit package list mapping for freezeInterval. Use Inspector and package-rule sections for package-level control.</string>
+    <string name="mode_high_extreme">High extreme mode (highExtremeMode)</string>
+    <string name="mode_extreme">Extreme mode (extremeMode)</string>
+    <string name="mode_high_perf">High performance mode (highPerfMode)</string>
+    <string name="mode_high_load_l3">High load mode (highLoadMode, level=3)</string>
+    <string name="mode_high_load_l1">High load mode (highLoadMode, level=1)</string>
+    <string name="app_type_general">General app (appType=1000)</string>
+    <string name="app_type_net">Network-related (appType=4)</string>
+    <string name="app_type_net_combo">Network/combo (appType=4#7)</string>
+    <string name="advanced_fields">Advanced fields</string>
+    <string name="freeze_timing_explain_no_unit">These thresholds control run→transition→freeze timing.</string>
+    <string name="inspector_placeholder_pick_app">Please select an app</string>
+    <string name="why_affect_key_points">Key points</string>
+    <string name="why_affect_point_1">• appType=4 maps to net (from appTypeConfig).</string>
+    <string name="why_affect_point_2">• App classification is determined by ROM at runtime.</string>
+    <string name="why_affect_point_3">• XML does not provide an explicit freezeInterval → package mapping.</string>
+    <string name="why_affect_jump">Jump to</string>
+    <string name="why_affect_open_inspector">Open "Inspect App"</string>
+    <string name="why_affect_open_package_rules">Open "Package-level rules/list" (SysBlackApp/sysBlack/allow/donot-freeze/exemptions)</string>
+    <string name="scene_blacklist_explain">After adding, the system is more likely to freeze/restrict the app in that scene.</string>
+    <string name="global_whitelist_explain">Configure weaker/stronger exemptions carefully to balance performance and battery.</string>
+    <string name="scene_lcdon">Screen on (lcdon)</string>
+    <string name="scene_lcdoff">Screen off (lcdoff)</string>
+    <string name="scene_night">Night (night)</string>
+    <string name="edit_section_list">Edit</string>
+    <string name="back_to_top">Back to top</string>
+    <string name="autostart_actions_title">Policy actions</string>
+    <string name="settings_basic_group">Feature toggles</string>
+    <string name="settings_tools_group">Tools &amp; support</string>
+    <string name="tombstone_actions_title">Policy actions &amp; apply</string>
+    <string name="advanced_editing_confirm">Enabling developer editing can break ROM behavior. Continue?</string>
+    <string name="app_picker_invalid_launch_fallback">Picker launch params missing; fallback to empty selection.</string>
+    <string name="app_picker_open_failed">Failed to open app list editor.</string>
+    <string name="copy_crash_success">Crash stack copied</string>
+    <string name="copy_last_crash">Copy last crash stack</string>
+    <string name="export_logs">Export logs</string>
+    <string name="export_logs_success">Logs exported</string>
+    <string name="field_freeze_check_title">Importance check interval (checkImportance)</string>
+    <string name="field_freeze_guard_title">Pre-freeze guard time (guardTime)</string>
+    <string name="field_freeze_mtof_title">Middle to freeze threshold (MToF)</string>
+    <string name="field_freeze_mtofst_title">Middle to freeze strict threshold (MToFST)</string>
+    <string name="field_freeze_rtom_title">Run to middle threshold (RToM)</string>
+    <string name="field_freeze_rtomst_title">Run to middle strict threshold (RToMST)</string>
+    <string name="freeze_timing">Freeze timing</string>
+    <string name="freeze_timing_explain">Unit: milliseconds (ms). These thresholds control run→transition→freeze timing.</string>
+    <string name="high_risk_readonly">High risk: read-only by default. Editing may affect system communication behavior.</string>
+    <string name="inspector_group_binder">Component/Binder rules</string>
+    <string name="inspector_group_feature">Feature set (pkgConfig)</string>
+    <string name="inspector_group_mainline">Main freeze chain</string>
+    <string name="inspector_group_special">Special handling &amp; exemptions</string>
+    <string name="inspector_mainline_explain">This is in the freeze main chain and may directly affect freeze behavior.</string>
+    <string name="inspector_only_editable">Only show editable items</string>
+    <string name="inspector_pkg_helper">Example: com.tencent.mm</string>
+    <string name="inspector_pkg_label">Selected app</string>
+    <string name="inspector_result_summary">Safe editable: %1$d
+Caution: %2$d
+High risk: %3$d</string>
+    <string name="ms_only_hint">Unit: ms (milliseconds).</string>
+    <string name="no_crash_log">No crash log available</string>
+    <string name="not_configured">Not configured</string>
+    <string name="quick_actions">Quick actions</string>
+    <string name="quick_actions_hint">This only stages changes. Tap Apply policy to persist.</string>
+    <string name="quick_keep_alive">Keep alive</string>
+    <string name="quick_keep_alive_notice">Keep-alive will try: remove from SysBlackApp scenes, add to ffPkg.black/whitePkg.category=100 when supported, plus other selected lists. Changes are staged until Apply policy.</string>
+    <string name="quick_preview_keep_alive">Staged: applied selected keep-alive targets for selected packages.</string>
+    <string name="quick_preview_suppress">Staged: removed favorable lists, added scene freeze targets, and synced guardTime/RToM/RToMST/MToF/MToFST to 0.</string>
+    <string name="quick_suppress">Suppress now</string>
+    <string name="quick_suppress_notice">This shortcut will synchronize parameters to: guardTime=0, RToM=0, RToMST=0, MToF=0, MToFST=0. checkImportance is unchanged.</string>
+    <string name="quick_target_donot_freeze">donot_freeze_app_list (do not freeze)</string>
+    <string name="quick_target_freeze_allow">freeze_allow_list (startup freeze-chain whitelist)</string>
+    <string name="ff_skip_title">Fast-freeze skip list (ffPkg.black)</string>
+    <string name="ff_skip_explain">When added, fast freezer skips quick-freeze for this app. Better keep-alive, potentially higher battery usage.</string>
+    <string name="white_third_title">Third-party whitelist (whitePkg.category=100)</string>
+    <string name="white_third_explain">When added, system tends to relax freeze/proxy limits for this app. Better keep-alive, potentially higher battery usage.</string>
+    <string name="remove">Remove</string>
+    <string name="risk_confirm_required">Developer mode required + risk confirmation before editing.</string>
+    <string name="select_app">Select app</string>
+    <string name="special_app_card_explain">AppCard ignore: this app may be skipped by background card management and is less likely to be reclaimed.</string>
+    <string name="special_app_card_title">AppCard ignore list (appCard.ignoreApp)</string>
+    <string name="special_cpn_explain">Component/Binder rules affect system communication interfaces. Wrong edits may break system features.</string>
+    <string name="special_cpn_title">Component/Binder rules (cpnAsyncBinder)</string>
+    <string name="special_cpu_ctl_explain">CPU control exemption: this app is less likely to be throttled by CPU restriction policies.</string>
+    <string name="special_cpu_ctl_title">CPU control whitelist (cpuCtlWhiteList)</string>
+    <string name="special_handling">Special Handling</string>
+    <string name="special_im_pkg_explain">IM special handling: marked as instant messaging; the system may treat notifications/keepalive/freeze differently.</string>
+    <string name="special_im_pkg_title">IM special handling (imPkg)</string>
+    <string name="special_pkg_config_explain">Feature set: category is a bitmask-style switch set. Editing package tokens changes system behavior.</string>
+    <string name="special_pkg_config_title">Feature set (pkgConfig, read-only by default)</string>
+    <string name="tab_advanced">Advanced</string>
+    <string name="tab_recommended">Recommended</string>
+    <string name="tombstone_dirty_badge">• Unapplied changes</string>
+    <string name="tombstone_inspector">Inspect app</string>
+    <string name="tombstone_inspector_hint">Search a package to inspect hits across freeze and special handling rules.</string>
+    <string name="tombstone_io_apply">Apply &amp; Import/Export</string>
+
+    <string name="special_enable_config_title">Global toggles (enableConfig)</string>
+    <string name="special_enable_config_explain">Global hans/gms and related switches from enableConfig; affects global strategy behavior.</string>
+    <string name="special_gms_title">GMS list (gms)</string>
+    <string name="special_gms_explain">GMS package list used by ROM strategy. Editing changes global app-class behavior.</string>
+    <string name="special_ff_skip_title">Fast-freeze skip list (ffPkg.black)</string>
+    <string name="special_ff_skip_explain">skip fastfreeze for selected packages.</string>
+    <string name="special_white_100_title">Key whitelist (whitePkg.100)</string>
+    <string name="special_white_100_explain">forcewhite-like key whitelist category 100.</string>
+    <string name="special_white_010_title">System/OPlus whitelist (whitePkg.010)</string>
+    <string name="special_white_010_explain">system/vendor oriented whitelist category 010.</string>
+    <string name="special_white_001_title">Third-party whitelist (whitePkg.001)</string>
+    <string name="special_white_001_explain">third-party oriented whitelist category 001.</string>
+    <string name="special_black_hans_title">Black Hans package list (blackHansPkg)</string>
+    <string name="special_black_hans_explain">blackHansPkg enable + pkg token list editor.</string>
+    <string name="quick_target_ff_skip">Skip fast-freeze (ffPkg.black)</string>
+    <string name="quick_target_white_100">Key whitelist (whitePkg.100)</string>
+    <string name="proxy_section_title">Proxy / Batch</string>
+    <string name="proxy_global_title">Proxy global config (proxyConfig)</string>
+    <string name="proxy_default_bc_title">Default proxy broadcast actions</string>
+    <string name="proxy_default_bc_explain">Edit defaultProxyBc action list (all occurrences).</string>
+    <string name="proxy_sensor_type_title">Proxy sensor type names</string>
+    <string name="proxy_sensor_type_explain">Edit proxySensor/proxyType list.</string>
+    <string name="proxy_gps_title">Proxy GPS</string>
+    <string name="proxy_gps_explain">Proxy GPS config and package matching rules for items.</string>
+    <string name="proxy_bt_scan_title">Proxy Bluetooth Scan</string>
+    <string name="proxy_bt_scan_explain">Enable or disable proxyBtScan behavior.</string>
+    <string name="proxy_binder_title">Proxy Binder</string>
+    <string name="proxy_binder_explain">Proxy Binder descConfig package matching rules.</string>
+    <string name="v3c_service_bump_title">Service bump unfreeze reasons</string>
+    <string name="v3c_prevent_title">Hard prevent rules (prevent)</string>
+    <string name="v3c_allow_title">Hard allow rules (allow)</string>
+    <string name="v3c_android_freeze_title">Android freeze linkage</string>
+    <string name="v3c_app_quota_title">App quota continuous task config</string>
+    <string name="v3c_high_loading_title">High-loading config</string>
+    <string name="v3c_cpu_ctl_rus_title">CPU control RUS config</string>
+    <string name="proxy_sensor_title">Proxy Sensor</string>
+    <string name="proxy_sensor_explain">proxySensor whiteTypePkg pkg rules.</string>
+    <string name="quick_suppress_notice_v3">Default: remove favorable/exempt lists and add selected apps into scene freeze targets (lcdon/lcdoff/night).
+
+Only with Advanced editing enabled, you may additionally select "Sync freeze timing parameters to 0 (global, high risk)". L1/L2/L3 sets only existing fields inside freezeInterval to 0, adds no new fields, and never modifies checkImportance.</string>
+    <string name="quick_suppress_timing_enable">Sync freeze timing parameters to 0 (global, high risk)</string>
+    <string name="quick_suppress_timing_help_l1">L1: Set guardTime/RToM/RToMST/MToF/MToFST to 0 under freezeInterval{highExtremeMode:*:1000} (existing fields only). Does not modify checkImportance.</string>
+    <string name="quick_suppress_timing_help_l2">L2: Set guardTime/RToM/RToMST/MToF/MToFST to 0 under freezeInterval{highExtremeMode|extremeMode|highPerfMode|highLoadMode:*:1000} (existing fields only). Does not modify checkImportance.</string>
+    <string name="quick_suppress_timing_help_l3">L3: Based on L2, appType expands to 1000/4/7/4#7. Existing fields only. Does not modify checkImportance.</string>
+    <string name="quick_suppress_timing_help_disabled">Freeze timing sync is not enabled.</string>
+    <string name="quick_preview_suppress_basic">Staged: removed favorable/exempt lists and added scene freeze targets.</string>
+    <string name="quick_preview_suppress_with_timing">Staged: removed favorable/exempt lists, added scene freeze targets, and additionally synced key freezeInterval parameters to 0 (global high risk).</string>
+    <string name="quick_suppress_timing_profile_l1">L1 (conservative timing preset): highExtremeMode + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l2">L2 (balanced timing preset): highExtreme/extreme/highPerf/highLoad + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l3">L3 (aggressive timing preset): L2 + appType=1000/4/7/4#7</string>
+    <string name="quick_suppress_timing_profile_l1_short">L1</string>
+    <string name="quick_suppress_timing_profile_l2_short">L2</string>
+    <string name="quick_suppress_timing_profile_l3_short">L3</string>
+    <string name="quick_preview_suppress_with_timing_profile">Staged: removed favorable/exempt lists, added scene freeze targets, and applied %1$s timing profile.</string>
+    <string name="policy_group_multiple_unsupported">Multiple policy groups detected. Apply is blocked to avoid silent partial writes.</string>
+
+    <string name="module_fast_freeze_title">Fast Freeze</string>
+    <string name="module_fast_freeze_desc">Control which apps skip fast freeze to avoid harming resident behavior.</string>
+    <string name="module_whitelist_title">Critical Allow / Whitelist</string>
+    <string name="module_whitelist_desc">Centralize key global priority and exemption lists such as IM and CPU.</string>
+    <string name="module_sys_black_title">Sys Black Governance</string>
+    <string name="module_sys_black_desc">Use screen-on/screen-off/night scenes to target apps for stricter freezing.</string>
+    <string name="module_proxy_title">Proxy / Batch</string>
+    <string name="module_proxy_desc">Aggregate proxy switches, default broadcast behavior, and batch rule entry points.</string>
+    <string name="module_bump_title">Unfreeze / Bump</string>
+    <string name="module_bump_desc">Configure service unfreeze reasons and fallback rules to reduce false freezes.</string>
+    <string name="module_high_load_title">High Load / Strict / Quota</string>
+    <string name="module_high_load_desc">For high-load and strict-governance scenarios. Use with caution.</string>
+    <string name="module_action_config">Configure</string>
+    <string name="module_action_advanced">Advanced</string>
+    <string name="module_supported">Supported</string>
+    <string name="module_not_supported">Not supported</string>
+    <string name="module_parsed_editable">Parsed / editable</string>
+    <string name="module_not_supported_ff">Current policy does not support ffPkg.black</string>
+    <string name="module_menu_fast_freeze_skip">Skip fast freeze list (ffPkg.black)</string>
+    <string name="module_menu_fast_freeze_explain">Inspect and locate fast-freeze related parameters (Advanced)</string>
+    <string name="module_menu_whitelist_donot">Global priority &amp; exemptions (DoNotFreeze)</string>
+    <string name="module_menu_whitelist_white100">whitePkg (third-party whitelist, category=100)</string>
+    <string name="module_menu_whitelist_im">IM special list (imPkg)</string>
+    <string name="module_menu_whitelist_cpuctl">CPU control whitelist (cpuCtlWhiteList)</string>
+    <string name="module_menu_whitelist_appcard">AppCard ignore list (appCard.ignoreApp)</string>
+    <string name="module_menu_whitelist_keep_alive">Keep alive quick action</string>
+    <string name="module_menu_sys_black_quick">Suppress now</string>
+    <string name="module_menu_sys_black_lcdon">Include by scene: Screen on (lcdon)</string>
+    <string name="module_menu_sys_black_lcdoff">Include by scene: Screen off (lcdoff)</string>
+    <string name="module_menu_sys_black_night">Include by scene: Night (night)</string>
+    <string name="module_menu_sys_black_policy">Scenario params (SysBlackPolicy/RestrictMask)</string>
+    <string name="module_menu_proxy_global">(Advanced) Proxy global switches and params (proxyConfig)</string>
+    <string name="module_menu_proxy_default_bc">(Advanced) Default proxy broadcasts (defaultProxyBc)</string>
+    <string name="module_menu_proxy_exclude">(Advanced) Broadcast exclude rules (proxyBcExcludeAction/Rules)</string>
+    <string name="module_menu_proxy_bundle">(Advanced) Wakelock / GPS / Sensor / Binder / BtScan</string>
+    <string name="module_menu_bump_service">Service unfreeze reasons (serviceBumpUnFzReasonList)</string>
+    <string name="module_menu_bump_rules">Hard rules: prevent/allow (high risk)</string>
+    <string name="module_menu_bump_traffic">Network fallback (trafficConfig)</string>
+    <string name="module_menu_highload_loading">High-loading detection (high-loading)</string>
+    <string name="module_menu_highload_cpuctl">CPU anomaly control (cpuCtlRus)</string>
+    <string name="module_menu_highload_android_freeze">AOSP Freeze linkage (android-freeze)</string>
+    <string name="module_menu_highload_quota">Task quota (appQuotaConfig)</string>
+    <string name="module_menu_highload_strict">StrictMode switch (enable only)</string>
+    <string name="module_summary_fast_freeze">skip fastfreeze: %1$d apps; ffPkg.black: %2$s</string>
+    <string name="module_summary_whitelist">DoNotFreeze=%1$d；whitePkg(100)=%2$d；IM=%3$d；CPU=%4$d；AppCard=%5$d</string>
+    <string name="module_summary_sys_black">lcdon=%1$d; lcdoff=%2$d; night=%3$d</string>
+    <string name="module_summary_proxy">proxyConfig: %1$s; rules: %2$d</string>
+    <string name="module_summary_bump">serviceBump=%1$d；prevent=%2$d；allow=%3$d</string>
+    <string name="module_summary_high_load">high-loading=%1$s；android-freeze=%2$s；quota(max)=%3$s</string>
+
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+
+
+    <string name="module_detail_open_advanced">View all advanced items</string>
+    <string name="close">Close</string>
+    <string name="expand">Expand</string>
+    <string name="collapse">Collapse</string>
+
+    <string name="section_enable_config_title">Global toggles (enableConfig)</string>
+    <string name="section_enable_config_body">Affects global switches such as hans/gms; modify with caution.</string>
+    <string name="section_whitelist_title">Critical Allow / Whitelist (affects freeze hits)</string>
+    <string name="section_whitelist_body">Maps to doNotFreeze/whitePkg/imPkg/cpuCtl/appCard/gms/ffPkg.black.</string>
+    <string name="section_pkg_config_title">Per-package overrides: feature set (pkgConfig) [Developer]</string>
+    <string name="section_pkg_config_body">Override switches/bit masks per package. Expand to inspect real node names and key attributes.</string>
+    <string name="section_binder_title">Component / Binder rules [Developer]</string>
+    <string name="section_binder_body">Control proxy Binder/async callbacks to reduce background wakeups and callback storms.</string>
+    <string name="section_extreme_title">Unfreeze / Bump / High Load / Quota</string>
+    <string name="section_extreme_body">Includes high-risk entries like prevent/allow/serviceBump/high-loading/android-freeze/appQuota/strictMode.</string>
+    <string name="proxy_semantic_title">Proxy / Batch (reduce wakeups)</string>
+    <string name="proxy_semantic_body">Includes proxyConfig/defaultProxyBc/proxySensor/proxyGps/proxyBtScan/proxyBinder.</string>
+    <string name="policy_section_title">Scenario template and restrict mask notes</string>
+    <string name="policy_section_body">Control upper bounds for SysBlackApp scene hits; developer-oriented, some fields require Advanced editing.</string>
+    <string name="policy_template_title">Scenario template: %1$s (scene=%2$s)</string>
+    <string name="policy_mask_title">Restrict mask: %1$s</string>
+    <string name="policy_technical_detail">group=%1$s</string>
+
+    <string name="module_detail_fast_freeze_skip_desc">Edit ffPkg type=black to skip fast freeze for selected packages.</string>
+    <string name="module_detail_whitelist_donot_desc">Edit DoNotFreeze exemption list.</string>
+    <string name="module_detail_whitelist_white100_desc">Edit whitePkg category=100 (third-party whitelist).</string>
+    <string name="module_detail_whitelist_im_desc">Edit IM special list (imPkg).</string>
+    <string name="module_detail_whitelist_cpuctl_desc">Edit CPUCtl whitelist (cpuCtlWhiteList).</string>
+    <string name="module_detail_whitelist_appcard_desc">Edit AppCard ignore list (appCard.ignoreApp).</string>
+    <string name="module_detail_whitelist_keepalive_desc">Quick Keep alive action.</string>
+    <string name="module_detail_sys_black_quick_desc">Open Suppress now quick action.</string>
+    <string name="module_detail_sys_black_lcdon_desc">Edit scene list: lcdon.</string>
+    <string name="module_detail_sys_black_lcdoff_desc">Edit scene list: lcdoff.</string>
+    <string name="module_detail_sys_black_night_desc">Edit scene list: night.</string>
+    <string name="module_detail_sys_black_policy_desc">Inspect advanced SysBlackPolicy/RestrictMask params.</string>
+    <string name="module_detail_proxy_global_desc">Inspect and edit proxyConfig global params (advanced gate).</string>
+    <string name="module_detail_proxy_default_bc_desc">Inspect and edit defaultProxyBc broadcast actions (advanced gate).</string>
+    <string name="module_detail_proxy_bundle_desc">Inspect proxySensor/proxyGps/proxyBtScan/proxyBinder and related abilities (advanced gate).</string>
+    <string name="module_detail_bump_service_desc">Edit serviceBumpUnFzReasonList (high risk).</string>
+    <string name="module_detail_bump_prevent_desc">Edit prevent scene rules (high risk).</string>
+    <string name="module_detail_bump_allow_title">allow scene rules</string>
+    <string name="module_detail_bump_allow_desc">Edit allow scene rules (high risk).</string>
+    <string name="module_detail_bump_traffic_desc">trafficConfig has no dedicated editor yet; use the Advanced section.</string>
+    <string name="module_detail_high_load_loading_desc">Edit high-loading detection (high risk).</string>
+    <string name="module_detail_high_load_cpuctl_desc">Edit cpuCtlRus (high risk).</string>
+    <string name="module_detail_high_load_android_freeze_desc">Edit android-freeze linkage (high risk).</string>
+    <string name="module_detail_high_load_quota_desc">Edit appQuotaConfig (high risk).</string>
+    <string name="module_detail_high_load_strict_desc">Only edits strictMode enable; does not modify level.</string>
+
+
+    <string name="list_editor_import_clipboard">Import from clipboard</string>
+    <string name="list_editor_sort">Sort</string>
+    <string name="list_editor_clear">Clear</string>
+    <string name="staged_ok_count">Staged: %1$d items</string>
+    <string name="list_editor_save">Save staged</string>
+    <string name="list_editor_edit_item">Edit item</string>
+    <string name="list_editor_delete_item">Delete item</string>
+    <string name="list_editor_clipboard_empty">Clipboard is empty</string>
+    <string name="list_editor_desc_service_bump">One reason per line (for example: bind/create/start); custom values are allowed</string>
+    <string name="list_editor_desc_plain_tokens">One token per line; multi-line paste is supported; duplicates are removed</string>
+    <string name="list_editor_desc_key_value_with_sample">Must be in key=value format (example: %1$s)</string>
+    <string name="list_editor_desc_csv_rule_with_sample">Must be scene,pkg,mask,version,code (pkg is required). Example: %1$s</string>
+    <string name="list_editor_invalid_lines_count">%1$d invalid line(s) found</string>
+    <string name="list_editor_invalid_key_value_missing_equal">Line %1$d is missing =: %2$s</string>
+    <string name="list_editor_invalid_key_value_empty_key">Line %1$d has an empty key: %2$s</string>
+    <string name="list_editor_invalid_csv_too_few_columns">Line %1$d has too few CSV columns (need at least 2): %2$s</string>
+    <string name="list_editor_invalid_csv_pkg_required">Line %1$d has empty pkg: %2$s</string>
+    <string name="list_editor_desc_android_freeze_mixed_format">This page supports mixed formats:
+Switches: key=value (only enable/whiteEnable/killWhiteEnable/sysAppExemptEnable, true/false)
+Exempt quota: pkg[,bgMode] (for example: com.oplus.camera,256)</string>
+    <string name="list_editor_invalid_android_freeze_unknown_key">Line %1$d: unknown switch key (%2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_boolean">Line %1$d: switch value must be true/false (current: %2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_quota_columns">Line %1$d: invalid exempt quota format (only pkg or pkg,bgMode): %2$s</string>
+    <string name="list_editor_invalid_android_freeze_invalid_pkg">Line %1$d: invalid exempt quota pkg (current: %2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_bgmode">Line %1$d: exempt quota bgMode must be numeric (current: %2$s)</string>
+    <string name="edit_invalid_all_ignored">All inputs are invalid; changes were ignored and existing staged config was kept</string>
+    <string name="list_editor_import_result">Imported %1$d items</string>
+    <string name="proxy_binder_desc_help">Per line: desc=pkg1|pkg2 (pkg supports * wildcard; internal delimiter is #).</string>
+    <string name="about_section_title">About</string>
+    <string name="about_version_label">Version: </string>
+    <string name="about_author_label">Author: </string>
+    <string name="author_name">Astor</string>
+    <string name="editor_spec_self_check_warning">Developer self-check: current config does not match validation. See logs.</string>
+    <string name="hook_config_source_value">Hook config source: %1$s</string>
+    <string name="hook_master_resolved_value">Master: %1$s (source=%2$s)</string>
+    <string name="hook_autostart_resolved_value">Autostart: %1$s (source=%2$s)</string>
+    <string name="hook_tombstone_resolved_value">Tombstone: %1$s (source=%2$s)</string>
+    <string name="hook_user_fact_value">Has user configuration fact: %1$s (%2$s)</string>
+    <string name="settings_diag_group">Diagnostics (read-only)</string>
+    <string name="settings_experiments_group">Experiments (staged rollout)</string>
+    <string name="allow_pm_readconfig_observe">Phone Manager: observe readConfig only</string>
+    <string name="allow_pm_readconfig_modify">Phone Manager: allow readConfig replace (experimental)</string>
+    <string name="allow_pm_fs_hook">Phone Manager: allow FS hook (high risk)</string>
+    <string name="allow_sc_readconfig_observe">Safe Center: observe readConfig only</string>
+    <string name="allow_sc_readconfig_modify">Safe Center: allow readConfig replace (experimental)</string>
+    <string name="allow_sc_fs_hook">Safe Center: allow FS hook (high risk)</string>
+    <string name="cleanup_system_state_title">Clear system-level persistent configuration</string>
+    <string name="cleanup_system_state_message">This clears persist.opch.* system properties and leftover files in /data/local/tmp/oplusconfighook.
+Root is required.
+
+App settings are not removed. Re-apply policy or reboot to take effect.</string>
+    <string name="cleanup_system_state_continue">Continue cleanup</string>
+    <string name="cleanup_system_state_running">Cleaning...</string>
+    <string name="cleanup_system_state_button">Clear system-level persistent configuration (Root required)</string>
+    <string name="cleanup_system_state_hint">Clear leftover persist properties and external config files after uninstall/reinstall. App settings are not removed.</string>
+    <string name="cleanup_system_state_result">Cleanup complete: %1$d/%2$d (system properties + external files). Re-apply policy or reboot to take effect.</string>
+    <string name="editor_render_failed_reopen">Editor render failed, please reopen.</string>
+    <string name="editor_submit_host_not_found">Cannot submit: host not found.</string>
+    <string name="proxy_config_enable">config.enable</string>
+    <string name="proxy_sensor_proxy_pkg_hint">proxyPkg (one package per line, merged with | on submit)</string>
+    <string name="proxy_sensor_proxy_type_hint">proxyType (one typeName per line)</string>
+    <string name="proxy_sensor_white_type_pkg_hint">whiteTypePkg (one line as type=pkg1|pkg2)</string>
+    <string name="proxy_sensor_invalid_proxy_pkg">Invalid package in proxyPkg: %1$s</string>
+    <string name="proxy_sensor_invalid_white_type_pkg">Invalid package in whiteTypePkg: %1$s</string>
+    <string name="proxy_binder_invalid_pkg">Invalid package in descConfig: %1$s</string>
+    <string name="scene_token_lcdon">lcdon</string>
+    <string name="scene_token_lcdoff">lcdoff</string>
+    <string name="scene_token_night">night</string>
+    <string name="proxy_occurrence_suffix"> (occurrences=%1$d, planned updates=%2$d)</string>
+    <string name="proxy_sensor_summary">enable=%1$s, proxyType=%2$s, proxyPkg=%3$s, typeCount=%4$d, whiteRules=%5$d%6$s</string>
+    <string name="proxy_binder_summary">enable=%1$s, descRules=%2$d%3$s</string>
+</resources>

@@ -1,0 +1,538 @@
+<resources>
+    <string name="app_name">OplusConfigHook</string>
+    <string name="tab_tombstone">백그라운드 동결</string>
+    <string name="tab_autostart">자동 시작 관리</string>
+    <string name="tab_settings">설정</string>
+
+    <string name="image_placeholder">자리표시 이미지</string>
+    <string name="free_notice_title">이것은 무료 오픈소스 소프트웨어입니다</string>
+    <string name="free_notice_message">이 기적과 마법은 무료예요. 돈을 냈다면 사기당한 겁니다!</string>
+    <string name="open_project_homepage">프로젝트 홈페이지</string>
+    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+
+    <string name="enable_replacement">대체 기능 사용</string>
+    <string name="enable_autostart_replacement">자동 시작 대체 사용</string>
+    <string name="enable_tombstone_replacement">백그라운드 동결 정책 대체 사용</string>
+    <string name="allow_android_fs_hook">Android 프로세스에서 FS 훅 허용(고위험)</string>
+    <string name="debug_force_master">디버그: master=true 강제(임시)</string>
+    <string name="log_stack">스택트레이스 기록</string>
+    <string name="log_only_matches">일치한 키만 기록</string>
+
+    <string name="autostart_policy_desc">자동 시작 화이트리스트를 편집합니다(txt 한 줄당 패키지 1개).</string>
+    <string name="tombstone_policy_desc">백그라운드 동결 정책 목록과 시나리오별 블랙리스트를 안전하게 편집합니다.</string>
+    <string name="current_source_value">현재 소스: %1$s</string>
+    <string name="source_user">사용자 정책</string>
+    <string name="source_asset">내장 기본값</string>
+
+    <string name="import_txt">txt 가져오기</string>
+    <string name="import_xml">xml 가져오기</string>
+    <string name="export_policy">내보내기</string>
+    <string name="apply_policy">정책 적용</string>
+    <string name="restore_default">기본값 복원</string>
+    <string name="edit_by_checked_apps">선택한 앱으로 수정</string>
+    <string name="staged_not_applied">임시 저장만 되었고 아직 적용되지 않았습니다.</string>
+
+    <string name="import_failed">가져오기 실패</string>
+    <string name="import_failed_reason">가져오기 실패: %1$s</string>
+    <string name="export_failed_reason">작업 실패: %1$s</string>
+    <string name="export_success">내보내기 완료</string>
+    <string name="autostart_invalid">자동 시작 파일이 비었거나 주석만 있습니다.</string>
+    <string name="policy_applied">정책을 적용했고 캐시를 새로고침했습니다.</string>
+
+    <string name="scene_params_readonly">장면 파라미터(읽기 전용, 일반 사용자 수정 비권장)</string>
+    <string name="scene_blacklist_title">상황별 동결 대상 추가</string>
+    <string name="scene_count_value">앱 %1$d개</string>
+    <string name="global_whitelist_title">전역 우대 및 예외</string>
+    <string name="freeze_allow_friendly">시작-동결 체인 화이트리스트(고급)
+특정 시작/동결 체인 규칙에만 영향을 주며, 전역 비동결 또는 상시 보활과는 다릅니다.</string>
+    <string name="donot_freeze_friendly">동결 안 함(dex2oat 동결 체인에만 영향, 전역 상주 보장은 아님). 백그라운드 상주 경향이 커지고 동결되지 않습니다. 신중히 사용하세요.</string>
+    <string name="more">더보기</string>
+    <string name="edit">Edit</string>
+
+    <string name="search_apps_hint">앱 이름 또는 패키지 검색</string>
+    <string name="system_app">시스템 앱</string>
+    <string name="add">추가</string>
+    <string name="confirm_stage">확인</string>
+    <string name="cancel">취소</string>
+
+    <string name="donation_entry">후원 지원</string>
+    <string name="donation_qr_title">후원 QR 코드</string>
+    <string name="wallet_address_label">지갑 주소</string>
+    <string name="wallet_eth_address">0x1234567890ABCDEF1234567890ABCDEF12345678</string>
+    <string name="copy">복사</string>
+    <string name="share">공유</string>
+    <string name="wallet_copy_success">주소가 복사되었습니다</string>
+    <string name="wallet_share_text">프로젝트 후원: %1$s</string>
+    <string name="wallet_share_chooser">지갑 주소 공유</string>
+    <string name="donation_security_notice">피싱 방지를 위해 주소 출처를 확인하세요.</string>
+
+    <string name="scene_params_editable">시나리오 매개변수 (위험 — 설정에서 고급 편집을 켜세요)</string>
+    <string name="reset_scene">기본값으로 재설정</string>
+    <string name="modified_not_applied">수정되었지만 아직 적용되지 않았습니다</string>
+    <string name="filter">필터</string>
+    <string name="sort">정렬</string>
+    <string name="filter_all_apps">전체 표시</string>
+    <string name="filter_user_apps">사용자 앱만</string>
+    <string name="filter_system_apps">시스템 앱만</string>
+    <string name="filter_state_value">필터: %1$s</string>
+    <string name="sort_by_label">앱 이름순 정렬</string>
+    <string name="sort_by_package">패키지명순 정렬</string>
+    <string name="sort_by_install_time">설치 시간순 정렬</string>
+    <string name="sort_by_update_time">업데이트 시간순 정렬</string>
+    <string name="sort_descending">내림차순</string>
+    <string name="tombstone_param_scene_title">scene 설명</string>
+    <string name="tombstone_param_scene_body">scene 값은 화면 켜짐, 화면 꺼짐, 야간, 충전 등 시스템 상태를 구분하는 데 사용됩니다.
+일반적으로 시스템에서 설정되므로 이해하지 못한 경우 변경하지 않는 것이 좋습니다.
+
+잘못된 값은 정책 오류를 유발할 수 있습니다.</string>
+    <string name="tombstone_param_mask_title">mask 설명</string>
+    <string name="tombstone_param_mask_body">mask 는 어떤 정책 규칙을 활성화할지 결정하는 비트 마스크입니다.
+ROM 버전에 따라 의미가 달라질 수 있습니다.
+
+특별한 이유가 없다면 기본값을 유지하는 것이 좋습니다.</string>
+    <string name="tombstone_param_quota_title">quota 설명</string>
+    <string name="tombstone_param_quota_body">quota 는 백그라운드 제한이 얼마나 자주 적용되는지에 영향을 줄 수 있는 임계값입니다.
+
+값이 클수록 제한이 줄어들 수 있고,
+값이 작을수록 제한이 강해질 수 있습니다.</string>
+    <string name="tombstone_param_bgmode_title">bgMode 설명</string>
+    <string name="tombstone_param_bgmode_body">bgMode 는 시스템 내부 백그라운드 정책 모드를 나타냅니다.
+정확한 의미는 ROM 구현에 따라 달라집니다.
+
+변경 시 동작이나 배터리 사용량에 영향을 줄 수 있습니다.</string>
+    <string name="tombstone_param_fgsexempt_title">fgsExempt 설명</string>
+    <string name="tombstone_param_fgsexempt_body">fgsExempt 는 포그라운드 서비스 예외 동작을 제어합니다.
+
+활성화하면 백그라운드 유지가 개선될 수 있지만
+배터리 사용량이 증가할 수 있습니다.</string>
+    <string name="tombstone_param_risk_notice">⚠ 이 값을 변경하면 이상 동작이나 배터리 증가가 발생할 수 있습니다. 책임은 사용자에게 있습니다.</string>
+    <string name="tombstone_param_dialog_ok">확인</string>
+
+    <string name="advanced_policy_edit">고급 편집(고위험)</string>
+    <string name="policy_group_sys_black_policy">정책 파라미터 (SysBlackPolicy)</string>
+    <string name="policy_group_sys_black_restrict">제한 마스크 (SysBlackRestrictMask)</string>
+    <string name="app_picker_loading_apps">앱 목록을 불러오는 중…</string>
+    <string name="app_picker_load_failed">앱 목록을 불러오지 못했습니다.</string>
+    <string name="filter_checked_all">전체</string>
+    <string name="filter_checked_only">선택됨</string>
+    <string name="filter_unchecked_only">선택 안 됨</string>
+    <string name="enable_advanced_editing_hint">이 필드를 수정하려면 설정에서 고급 편집을 켜세요.</string>
+    <string name="tombstone_freeze_help">이 페이지는 백그라운드 동결 정책을 제어합니다. 수정 시 알림/백그라운드 작업/배터리에 영향을 줄 수 있으며 책임은 사용자에게 있습니다.</string>
+    <string name="scene_info_lcdon_title">lcdon</string>
+    <string name="scene_info_lcdon_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. lcdon 매개변수는 화면 켜짐 상태에서 적용될 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_lcdoff_title">lcdoff</string>
+    <string name="scene_info_lcdoff_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. lcdoff 매개변수는 화면 꺼짐 상태에서 적용될 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_night_title">night</string>
+    <string name="scene_info_night_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. night 매개변수는 야간/수면 시간대와 관련될 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_charging_title">charging</string>
+    <string name="scene_info_charging_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. charging 매개변수는 충전 중에 적용될 수 있습니다. 제조사 정책에 따라 더 공격적이거나 보수적일 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_extremefg_title">extremeFg</string>
+    <string name="scene_info_extremefg_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. extremeFg 는 전면 활성 앱 그룹과 관련될 수 있으며, 더 엄격하거나 더 완화된 처리일 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_fastfreeze_title">fastFreeze</string>
+    <string name="scene_info_fastfreeze_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. fastFreeze 는 대기 시간을 줄여 더 빠르게 동결로 진입할 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="scene_info_minsystem_title">minSystem</string>
+    <string name="scene_info_minsystem_body">필드 이름과 일반적인 전원 관리 의미를 기준으로 한 추정입니다. minSystem 은 핵심 시스템 구성요소가 잘못 동결되지 않도록 하는 하한과 관련될 수 있습니다. 실제 동작은 시스템 구현에 따라 달라집니다.</string>
+    <string name="tombstone_title">백그라운드 동결</string>
+    <string name="reset_default">기본값으로 재설정</string>
+    <string name="advanced_editing">고급 편집</string>
+    <string name="advanced_editing_desc">원시 값을 편집합니다. 잘못 변경하면 알림/백그라운드 작업에 영향이 있을 수 있습니다.</string>
+    <string name="advanced_editing_required">변경하려면 설정에서 ‘고급 편집’을 켜세요.</string>
+    <string name="unit_ms">ms</string>
+    <string name="unit_s">초</string>
+    <string name="unit_raw">원시값</string>
+    <string name="approx_prefix">약</string>
+    <string name="unit_example_hint">변환 예시(참고용)</string>
+    <string name="unit_unknown_hint">이 항목의 단위가 명확하지 않습니다. 실제 해석은 시스템 구현에 따라 달라질 수 있습니다.</string>
+    <string name="scenario_params_risky">시나리오 파라미터(위험 항목, 설정에서 고급 편집을 켜야 수정 가능)</string>
+    <string name="hint_inference_disclaimer">이 설명은 필드명과 일반적인 전원 관리 동작을 바탕으로 한 추정입니다. 실제 동작은 ROM 구현에 따라 달라질 수 있습니다.</string>
+    <string name="hint_lcdon">화면 켜짐 상태에서 적용. 동결 전 지연/체크 주기에 영향이 있을 수 있습니다.</string>
+    <string name="hint_lcdoff">화면 꺼짐 상태에서 적용. 더 공격적으로 동결할 수 있습니다.</string>
+    <string name="hint_night">야간/수면 시간대에 적용. 예약된 절전 정책과 연관될 수 있습니다.</string>
+    <string name="hint_charging">충전 중 적용. 동결 강도가 달라질 수 있습니다.</string>
+    <string name="hint_extremefg">강한 포그라운드 조건/그룹. 포그라운드/활성 앱 처리 방식이 달라질 수 있습니다.</string>
+    <string name="hint_fastfreeze">빠른 동결 경로. 동결까지의 대기 시간이 줄어들 수 있습니다.</string>
+    <string name="hint_minsystem">시스템 최소 보호/화이트리스트 임계값. 핵심 시스템 구성요소의 오동결을 막을 수 있습니다.</string>
+    <string name="unit_example_both">ms로 해석: %1$s ≈ %2$s초. s로 해석: %1$s ≈ %3$s시간.</string>
+    <string name="invalid_number_value">숫자 형식이 올바르지 않습니다: %1$s</string>
+    <string name="large_value_risk_hint">큰 값이 감지되었습니다. 단위와 동작 위험을 다시 확인하세요.</string>
+    <string name="field_lcdOff_ffInterval">lcdOffConfig.ffInterval</string>
+    <string name="field_tip_lcdOff_ffInterval">Fast-freeze interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_interval">lcdOffConfig.interval</string>
+    <string name="field_tip_lcdOff_interval">Regular interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_ffTotal">lcdOffConfig.ffTotal</string>
+    <string name="field_tip_lcdOff_ffTotal">Total FF count (not a time field).</string>
+    <string name="field_lcdOn_RToM">lcdOnConfig.RToM</string>
+    <string name="field_tip_lcdOn_RToM">RToM transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_MToF">lcdOnConfig.MToF</string>
+    <string name="field_tip_lcdOn_MToF">MToF transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_checkImportance">lcdOnConfig.checkImportance</string>
+    <string name="field_tip_lcdOn_checkImportance">Importance check interval in lcdOnConfig.</string>
+    <string name="field_ff_enterTimeout">ffConfig.enterTimeout</string>
+    <string name="field_tip_ff_enterTimeout">Fast-freeze enter timeout.</string>
+    <string name="field_ff_interval">ffConfig.interval</string>
+    <string name="field_tip_ff_interval">Fast-freeze interval.</string>
+    <string name="field_ff_maxFzNum">ffConfig.maxFzNum</string>
+    <string name="field_tip_ff_maxFzNum">Maximum freeze count (not a time field).</string>
+    <string name="field_powerSave_repeatTime">powerSaveConfig.repeatTime</string>
+    <string name="field_tip_powerSave_repeatTime">Power save repeat time.</string>
+    <string name="field_traffic_interval">trafficConfig.interval</string>
+    <string name="field_tip_traffic_interval">Traffic check interval.</string>
+    <string name="field_traffic_unfreeze">trafficConfig.trafficUnfreezeTime</string>
+    <string name="field_tip_traffic_unfreeze">Unfreeze duration for traffic condition.</string>
+    <string name="field_api_upper">ApiTimeoutConfig.upperTimeout</string>
+    <string name="field_tip_api_upper">Upper API timeout.</string>
+    <string name="field_api_floor">ApiTimeoutConfig.floorTimeout</string>
+    <string name="field_tip_api_floor">Lower API timeout.</string>
+    <string name="field_query_interval">queryUsageStatsConfig.queryIntervalTime</string>
+    <string name="field_tip_query_interval">Usage stats query interval.</string>
+    <string name="field_query_messageDelay">queryUsageStatsConfig.messageDelayTime</string>
+    <string name="field_tip_query_messageDelay">Message delay time.</string>
+    <string name="field_query_repeatCount">queryUsageStatsConfig.messageRepeateCount</string>
+    <string name="field_tip_query_repeatCount">Message repeat count (not a time field).</string>
+    <string name="field_forceProxy_gpsInterval">screenOffStillForceProxyConfig.gpsInterval</string>
+    <string name="field_tip_forceProxy_gpsInterval">GPS interval for screen-off still force-proxy config.</string>
+    <string name="field_forceProxy_defaultInterval">screenOffStillForceProxyConfig.defaultInterval</string>
+    <string name="field_tip_forceProxy_defaultInterval">Default interval for screen-off still force-proxy config.</string>
+    <string name="field_freeze_guardTime">freezeInterval.guardTime</string>
+    <string name="field_tip_freeze_guardTime">Guard time in freezeInterval.</string>
+    <string name="field_freeze_RToM">freezeInterval.RToM</string>
+    <string name="field_tip_freeze_RToM">RToM transition in freezeInterval.</string>
+    <string name="field_freeze_RToMST">freezeInterval.RToMST</string>
+    <string name="field_tip_freeze_RToMST">RToMST transition in freezeInterval.</string>
+    <string name="field_freeze_MToF">freezeInterval.MToF</string>
+    <string name="field_tip_freeze_MToF">MToF transition in freezeInterval.</string>
+    <string name="field_freeze_MToFST">freezeInterval.MToFST</string>
+    <string name="field_tip_freeze_MToFST">MToFST transition in freezeInterval.</string>
+    <string name="field_freeze_checkImportance">freezeInterval.checkImportance</string>
+    <string name="field_tip_freeze_checkImportance">Importance check interval in freezeInterval.</string>
+    <string name="app_picker_invalid_launch_fallback">실행 파라미터가 없어 빈 선택으로 대체했습니다.</string>
+    <string name="app_picker_open_failed">앱 목록 편집기를 열 수 없습니다.</string>
+    <string name="export_logs">로그 내보내기</string>
+    <string name="copy_last_crash">최근 크래시 스택 복사</string>
+    <string name="export_logs_success">로그를 내보냈습니다</string>
+    <string name="no_crash_log">크래시 로그가 없습니다</string>
+    <string name="copy_crash_success">크래시 스택을 복사했습니다</string>
+    <string name="tombstone_inspector">앱 검사</string>
+    <string name="tombstone_inspector_hint">패키지명을 입력해 동결/특수 처리 규칙의 매칭을 확인합니다.</string>
+    <string name="special_handling">특수 처리</string>
+    <string name="special_im_pkg_title">IM 특례 (imPkg)</string>
+    <string name="special_cpu_ctl_title">CPU 제어 화이트리스트 (cpuCtlWhiteList)</string>
+    <string name="special_app_card_title">AppCard 무시 목록 (appCard.ignoreApp)</string>
+    <string name="special_pkg_config_title">기능 세트 (pkgConfig, 기본 읽기 전용)</string>
+    <string name="special_cpn_title">컴포넌트/Binder 규칙 (cpnAsyncBinder)</string>
+    <string name="special_im_pkg_explain">IM 특례: 메신저 앱으로 분류되어 알림/백그라운드/동결에서 우대될 수 있습니다.</string>
+    <string name="special_cpu_ctl_explain">CPU 제어 예외: CPU 제한 정책의 간섭을 덜 받을 수 있습니다.</string>
+    <string name="special_app_card_explain">AppCard 무시: 백그라운드 관리에서 제외되어 회수/동결이 줄어들 수 있습니다.</string>
+    <string name="high_risk_readonly">고위험: 기본 읽기 전용. 잘못 수정하면 시스템 통신 동작에 영향이 있을 수 있습니다.</string>
+    <string name="not_configured">구성되지 않음</string>
+    <string name="inspector_result_summary">안전 편집: %1$d
+주의: %2$d
+고위험: %3$d</string>
+    <string name="advanced_editing_confirm">개발자 편집을 켜면 ROM 동작에 문제가 생길 수 있습니다. 계속할까요?</string>
+    <string name="quick_actions">빠른 작업</string>
+    <string name="quick_suppress">지금 억제</string>
+    <string name="quick_keep_alive">상시 유지</string>
+    <string name="quick_actions_hint">이 작업은 변경 사항을 임시 저장만 합니다. 적용하려면 "정책 적용"을 누르세요.</string>
+    <string name="freeze_timing">동결 타이밍(Freeze timing)</string>
+    <string name="freeze_timing_explain">단위: 밀리초(ms). 이 임계값은 실행→전이→동결 타이밍을 제어합니다.</string>
+    <string name="field_freeze_guard_title">Pre-freeze guard time (guardTime)</string>
+    <string name="field_freeze_rtom_title">Run to middle threshold (RToM)</string>
+    <string name="field_freeze_rtomst_title">Run to middle strict threshold (RToMST)</string>
+    <string name="field_freeze_mtof_title">Middle to freeze threshold (MToF)</string>
+    <string name="field_freeze_mtofst_title">Middle to freeze strict threshold (MToFST)</string>
+    <string name="field_freeze_check_title">Importance check interval (checkImportance)</string>
+    <string name="inspector_pkg_label">선택한 앱</string>
+    <string name="inspector_pkg_helper">Example: com.tencent.mm</string>
+    <string name="select_app">Select app</string>
+    <string name="inspector_only_editable">Only show editable items</string>
+    <string name="inspector_group_mainline">Main freeze chain</string>
+    <string name="inspector_group_special">Special handling &amp; exemptions</string>
+    <string name="inspector_group_feature">Feature set (pkgConfig)</string>
+    <string name="inspector_group_binder">Component/Binder rules</string>
+    <string name="special_pkg_config_explain">Feature set: category is a bitmask-style switch set. Editing package tokens changes system behavior.</string>
+    <string name="special_cpn_explain">Component/Binder rules affect system communication interfaces. Wrong edits may break system features.</string>
+    <string name="inspector_mainline_explain">This is in the freeze main chain and may directly affect freeze behavior.</string>
+    <string name="risk_confirm_required">Developer mode required + risk confirmation before editing.</string>
+    <string name="quick_preview_suppress">Staged: removed favorable lists and applied suppress timing profile.</string>
+    <string name="quick_preview_keep_alive">Staged: added keep-alive list entries for selected packages.</string>
+    <string name="remove">Remove</string>
+    <string name="restore">복원</string>
+    <string name="inspector_empty_hint">앱을 선택하면 결과를 표시합니다</string>
+    <string name="freeze_timing_hint_once">값 단위는 밀리초(ms)입니다.</string>
+    <string name="why_affect_my_app">왜 이 설정이 내 앱에 영향을 주나요?</string>
+    <string name="why_affect_my_app_body">appType=4는 appTypeConfig에서 net에 매핑되지만, 앱 분류는 ROM이 런타임에 판단합니다. freezeInterval에 대한 명시적 패키지 목록 매핑은 XML에 없습니다. 패키지 단위 제어는 검사 기능과 패키지 규칙 섹션을 사용하세요.</string>
+    <string name="mode_high_extreme">고강도 모드 (highExtremeMode)</string>
+    <string name="mode_extreme">익스트림 모드 (extremeMode)</string>
+    <string name="mode_high_perf">고성능 모드 (highPerfMode)</string>
+    <string name="mode_high_load_l3">고부하 모드 (highLoadMode, level=3)</string>
+    <string name="mode_high_load_l1">고부하 모드 (highLoadMode, level=1)</string>
+    <string name="app_type_general">일반 앱 (appType=1000)</string>
+    <string name="app_type_net">네트워크 관련 (appType=4)</string>
+    <string name="app_type_net_combo">네트워크/조합 (appType=4#7)</string>
+    <string name="advanced_fields">고급 필드</string>
+    <string name="freeze_timing_explain_no_unit">이 임계값은 실행→전이→동결 타이밍을 제어합니다.</string>
+    <string name="inspector_placeholder_pick_app">앱을 선택하세요</string>
+    <string name="why_affect_key_points">핵심 요점</string>
+    <string name="why_affect_point_1">• appType=4는 appTypeConfig에서 net에 대응됩니다.</string>
+    <string name="why_affect_point_2">• 앱 분류는 ROM이 런타임에 판단합니다.</string>
+    <string name="why_affect_point_3">• XML은 freezeInterval → 패키지명의 명시 매핑을 제공하지 않습니다.</string>
+    <string name="why_affect_jump">바로가기</string>
+    <string name="why_affect_open_inspector">"앱 검사" 열기</string>
+    <string name="why_affect_open_package_rules">"패키지 규칙/목록" 열기 (SysBlackApp/sysBlack/allow/donot-freeze/예외)</string>
+    <string name="scene_blacklist_explain">추가하면 해당 상황에서 앱에 백그라운드 동결/제한이 더 자주 적용됩니다.</string>
+    <string name="global_whitelist_explain">약한 우대와 강한 예외를 상황에 맞게 사용해 체감과 배터리 소모를 균형 있게 조정하세요.</string>
+    <string name="scene_lcdon">화면 켜짐(lcdon)</string>
+    <string name="scene_lcdoff">화면 꺼짐(lcdoff)</string>
+    <string name="scene_night">야간(night)</string>
+    <string name="edit_section_list">편집</string>
+    <string name="back_to_top">맨 위로</string>
+    <string name="autostart_actions_title">정책 작업</string>
+    <string name="settings_basic_group">기능 토글</string>
+    <string name="settings_tools_group">도구 및 지원</string>
+    <string name="tombstone_actions_title">정책 작업 및 적용</string>
+    <string name="ms_only_hint">단위: ms(밀리초).</string>
+    <string name="quick_keep_alive_notice">보활은 다음을 시도합니다: SysBlackApp 장면에서 제거, 지원 시 ffPkg.black/whitePkg.category=100 추가, 그리고 선택한 다른 목록 반영. 변경 사항은 "정책 적용" 전까지 임시 저장됩니다.</string>
+    <string name="quick_suppress_notice">이 바로가기는 다음 값으로 동기화합니다: guardTime=0, RToM=0, RToMST=0, MToF=0, MToFST=0. checkImportance는 변경되지 않습니다.</string>
+    <string name="quick_target_donot_freeze">donot_freeze_app_list (동결 안 함)</string>
+    <string name="quick_target_freeze_allow">freeze_allow_list (시작-동결 체인 화이트리스트)</string>
+    <string name="ff_skip_title">빠른 동결 건너뛰기 목록 (ffPkg.black)</string>
+    <string name="ff_skip_explain">추가하면 fast freezer가 이 앱의 빠른 동결을 건너뜁니다. 보활에 유리하지만 배터리 소모가 늘 수 있습니다.</string>
+    <string name="white_third_title">서드파티 화이트리스트 (whitePkg.category=100)</string>
+    <string name="white_third_explain">추가하면 시스템이 이 앱의 동결/프록시 제한을 완화하는 경향이 있습니다. 보활에 유리하지만 배터리 소모가 늘 수 있습니다.</string>
+    <string name="tab_advanced">고급</string>
+    <string name="tab_recommended">권장</string>
+    <string name="tombstone_dirty_badge">• 적용되지 않은 변경</string>
+    <string name="tombstone_io_apply">정책 적용 및 가져오기/내보내기</string>
+
+    <string name="special_enable_config_title">전역 스위치 (enableConfig)</string>
+    <string name="special_enable_config_explain">enableConfig의 hans/gms 등 전역 스위치입니다.</string>
+    <string name="special_gms_title">GMS 목록 (gms)</string>
+    <string name="special_gms_explain">ROM 전략에서 사용하는 GMS 패키지 목록입니다.</string>
+    <string name="special_ff_skip_title">빠른 동결 건너뛰기 목록 (ffPkg.black)</string>
+    <string name="special_ff_skip_explain">선택 앱을 fastfreeze 대상에서 제외합니다.</string>
+    <string name="special_white_100_title">핵심 화이트리스트 (whitePkg.100)</string>
+    <string name="special_white_100_explain">카테고리 100 핵심 화이트리스트.</string>
+    <string name="special_white_010_title">시스템/OPlus 화이트리스트 (whitePkg.010)</string>
+    <string name="special_white_010_explain">카테고리 010 시스템 지향 화이트리스트.</string>
+    <string name="special_white_001_title">서드파티 화이트리스트 (whitePkg.001)</string>
+    <string name="special_white_001_explain">카테고리 001 서드파티 화이트리스트.</string>
+    <string name="special_black_hans_title">blackHansPkg 목록</string>
+    <string name="special_black_hans_explain">blackHansPkg enable 및 pkg 토큰 편집.</string>
+    <string name="quick_target_ff_skip">빠른 동결 건너뛰기 (ffPkg.black)</string>
+    <string name="quick_target_white_100">핵심 화이트리스트 (whitePkg.100)</string>
+    <string name="proxy_section_title">프록시 / 배치</string>
+    <string name="proxy_global_title">프록시 전역 설정 (proxyConfig)</string>
+    <string name="proxy_default_bc_title">기본 프록시 브로드캐스트 동작</string>
+    <string name="proxy_default_bc_explain">defaultProxyBc 액션 목록을 편집합니다(모든 발생 위치).</string>
+    <string name="proxy_sensor_type_title">프록시 센서 type 이름</string>
+    <string name="proxy_sensor_type_explain">proxySensor / proxyType 목록을 편집합니다.</string>
+    <string name="proxy_gps_title">GPS 프록시</string>
+    <string name="proxy_gps_explain">proxyGps 설정과 item 패키지 매칭 규칙을 편집합니다.</string>
+    <string name="proxy_bt_scan_title">블루투스 스캔 프록시</string>
+    <string name="proxy_bt_scan_explain">proxyBtScan 동작을 사용 또는 사용 안 함으로 전환합니다.</string>
+    <string name="proxy_binder_title">Binder 프록시</string>
+    <string name="proxy_binder_explain">proxyBinder의 descConfig 패키지 매칭 규칙을 편집합니다.</string>
+    <string name="v3c_service_bump_title">Service bump unfreeze reasons</string>
+    <string name="v3c_prevent_title">Hard prevent rules (prevent)</string>
+    <string name="v3c_allow_title">Hard allow rules (allow)</string>
+    <string name="v3c_android_freeze_title">Android freeze linkage</string>
+    <string name="v3c_app_quota_title">App quota continuous task config</string>
+    <string name="v3c_high_loading_title">High-loading config</string>
+    <string name="v3c_cpu_ctl_rus_title">CPU control RUS config</string>
+    <string name="proxy_sensor_title">센서 프록시</string>
+    <string name="proxy_sensor_explain">proxySensor의 whiteTypePkg 패키지 규칙을 편집합니다.</string>
+    <string name="quick_suppress_notice_v3">기본값: 우대/면제 목록을 제거하고 선택한 앱을 장면 동결 대상(lcdon/lcdoff/night)에 추가합니다.
+
+고급 편집을 켠 경우에만 "동결 타이밍 파라미터를 0으로 동기화(전역·고위험)"를 추가로 선택할 수 있습니다. 이 옵션은 L1/L2/L3에 따라 freezeInterval 내부의 기존 필드만 0으로 바꾸며, 새 필드를 추가하지 않고 checkImportance도 수정하지 않습니다.</string>
+    <string name="quick_suppress_timing_enable">동결 타이밍 파라미터를 0으로 동기화(전역·고위험)</string>
+    <string name="quick_suppress_timing_help_l1">L1: freezeInterval{highExtremeMode:*:1000}의 guardTime/RToM/RToMST/MToF/MToFST를 0으로 설정(기존 필드만). checkImportance는 수정하지 않습니다.</string>
+    <string name="quick_suppress_timing_help_l2">L2: freezeInterval{highExtremeMode|extremeMode|highPerfMode|highLoadMode:*:1000}의 guardTime/RToM/RToMST/MToF/MToFST를 0으로 설정(기존 필드만). checkImportance는 수정하지 않습니다.</string>
+    <string name="quick_suppress_timing_help_l3">L3: L2 기반으로 appType을 1000/4/7/4#7로 확장. 기존 필드만 수정하며 checkImportance는 수정하지 않습니다.</string>
+    <string name="quick_suppress_timing_help_disabled">동결 타이밍 동기화가 비활성화되어 있습니다.</string>
+    <string name="quick_preview_suppress_basic">임시 저장됨: 우대/면제 목록에서 제거하고 장면 동결 대상을 추가했습니다.</string>
+    <string name="quick_preview_suppress_with_timing">임시 저장됨: 우대/예외 목록을 제거하고 장면 동결 대상으로 추가했으며, freezeInterval의 주요 동결 파라미터를 추가로 0으로 동기화했습니다(전역 고위험).</string>
+    <string name="quick_suppress_timing_profile_l1">L1(보수 프리셋): highExtremeMode + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l2">L2(균형 프리셋): highExtreme/extreme/highPerf/highLoad + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l3">L3(공격 프리셋): L2 + appType=1000/4/7/4#7</string>
+    <string name="quick_suppress_timing_profile_l1_short">L1</string>
+    <string name="quick_suppress_timing_profile_l2_short">L2</string>
+    <string name="quick_suppress_timing_profile_l3_short">L3</string>
+    <string name="quick_preview_suppress_with_timing_profile">임시 저장됨: 우대/면제 목록에서 제거하고 장면 동결 대상으로 추가. 추가로 "%1$s" 타이밍 프리셋 적용(전역·고위험).</string>
+    <string name="policy_group_multiple_unsupported">여러 정책 그룹이 감지되었습니다. 조용한 부분 쓰기를 막기 위해 적용이 차단되었습니다.</string>
+
+    <string name="module_fast_freeze_title">Fast Freeze(고속 동결)</string>
+    <string name="module_fast_freeze_desc">어떤 앱이 고속 동결을 건너뛸지 제어하여 상주 동작을 잘못 건드리는 일을 줄입니다.</string>
+    <string name="module_whitelist_title">Critical Allow / Whitelist(핵심 허용 / 화이트리스트)</string>
+    <string name="module_whitelist_desc">IM, CPU 등 핵심 전역 우선 / 예외 목록을 한곳에서 관리합니다.</string>
+    <string name="module_sys_black_title">Sys Black Governance(시스템 블랙 제어)</string>
+    <string name="module_sys_black_desc">화면 켜짐 / 화면 꺼짐 / 야간 등의 시나리오를 사용해 대상 앱에 더 엄격한 동결 제어를 적용합니다.</string>
+    <string name="module_proxy_title">Proxy / Batch(프록시 / 배치)</string>
+    <string name="module_proxy_desc">프록시 스위치, 기본 브로드캐스트 동작, 배치 규칙 진입점을 한곳에 모읍니다.</string>
+    <string name="module_bump_title">Unfreeze / Bump(해동 / Bump)</string>
+    <string name="module_bump_desc">Service 해동 사유와 폴백 규칙을 설정해 오동결을 줄입니다.</string>
+    <string name="module_high_load_title">High Load / Strict / Quota(고부하 / 엄격 제어 / 쿼터)</string>
+    <string name="module_high_load_desc">고부하 및 엄격 제어 시나리오용입니다. 주의해서 사용하세요.</string>
+    <string name="module_action_config">Configure</string>
+    <string name="module_action_advanced">Advanced</string>
+    <string name="module_supported">Supported</string>
+    <string name="module_not_supported">Not supported</string>
+    <string name="module_parsed_editable">Parsed / editable</string>
+    <string name="module_not_supported_ff">Current policy does not support ffPkg.black</string>
+    <string name="module_menu_fast_freeze_skip">Skip fast freeze list (ffPkg.black)</string>
+    <string name="module_menu_fast_freeze_explain">Inspect and locate fast-freeze related parameters (Advanced)</string>
+    <string name="module_menu_whitelist_donot">Global priority &amp; exemptions (DoNotFreeze)</string>
+    <string name="module_menu_whitelist_white100">whitePkg (third-party whitelist, category=100)</string>
+    <string name="module_menu_whitelist_im">IM special list (imPkg)</string>
+    <string name="module_menu_whitelist_cpuctl">CPU control whitelist (cpuCtlWhiteList)</string>
+    <string name="module_menu_whitelist_appcard">AppCard ignore list (appCard.ignoreApp)</string>
+    <string name="module_menu_whitelist_keep_alive">Keep alive quick action</string>
+    <string name="module_menu_sys_black_quick">지금 억제</string>
+    <string name="module_menu_sys_black_lcdon">장면별 동결 대상 추가: 화면 켜짐(lcdon)</string>
+    <string name="module_menu_sys_black_lcdoff">장면별 동결 대상 추가: 화면 꺼짐(lcdoff)</string>
+    <string name="module_menu_sys_black_night">장면별 동결 대상 추가: 야간(night)</string>
+    <string name="module_menu_sys_black_policy">Scenario params (SysBlackPolicy/RestrictMask)</string>
+    <string name="module_menu_proxy_global">(고급) 프록시 전역 스위치 및 파라미터 (proxyConfig)</string>
+    <string name="module_menu_proxy_default_bc">(고급) 기본 프록시 브로드캐스트 (defaultProxyBc)</string>
+    <string name="module_menu_proxy_exclude">(고급) 브로드캐스트 제외 규칙 (proxyBcExcludeAction/Rules)</string>
+    <string name="module_menu_proxy_bundle">(고급) Wakelock / GPS / Sensor / Binder / BtScan</string>
+    <string name="module_menu_bump_service">Service unfreeze reasons (serviceBumpUnFzReasonList)</string>
+    <string name="module_menu_bump_rules">Hard rules: prevent/allow (high risk)</string>
+    <string name="module_menu_bump_traffic">Network fallback (trafficConfig)</string>
+    <string name="module_menu_highload_loading">High-loading detection (high-loading)</string>
+    <string name="module_menu_highload_cpuctl">CPU anomaly control (cpuCtlRus)</string>
+    <string name="module_menu_highload_android_freeze">AOSP Freeze linkage (android-freeze)</string>
+    <string name="module_menu_highload_quota">Task quota (appQuotaConfig)</string>
+    <string name="module_menu_highload_strict">StrictMode switch (enable only)</string>
+    <string name="module_summary_fast_freeze">skip fastfreeze: %1$d apps; ffPkg.black: %2$s</string>
+    <string name="module_summary_whitelist">DoNotFreeze=%1$d; whitePkg(100)=%2$d; IM=%3$d; CPU=%4$d; AppCard=%5$d</string>
+    <string name="module_summary_sys_black">lcdon=%1$d; lcdoff=%2$d; night=%3$d</string>
+    <string name="module_summary_proxy">proxyConfig: %1$s; rules: %2$d</string>
+    <string name="module_summary_bump">serviceBump=%1$d; prevent=%2$d; allow=%3$d</string>
+    <string name="module_summary_high_load">high-loading=%1$s; android-freeze=%2$s; quota(max)=%3$s</string>
+
+    <string name="enabled">사용</string>
+    <string name="disabled">사용 안 함</string>
+
+
+    <string name="module_detail_open_advanced">View all advanced items</string>
+    <string name="close">Close</string>
+    <string name="expand">Expand</string>
+    <string name="collapse">Collapse</string>
+
+    <string name="section_enable_config_title">전역 토글 (enableConfig)</string>
+    <string name="section_enable_config_body">hans / gms 등의 전역 스위치에 영향을 줍니다. 수정 시 주의하세요.</string>
+    <string name="section_whitelist_title">핵심 허용 / 화이트리스트(동결 판정에 영향)</string>
+    <string name="section_whitelist_body">doNotFreeze / whitePkg / imPkg / cpuCtl / appCard / gms / ffPkg.black 에 대응합니다.</string>
+    <string name="section_pkg_config_title">패키지별 재정의: 기능 집합 (pkgConfig) [개발자용]</string>
+    <string name="section_pkg_config_body">패키지별로 스위치와 비트 마스크를 재정의합니다. 펼치면 실제 노드 이름과 핵심 속성을 볼 수 있습니다.</string>
+    <string name="section_binder_title">컴포넌트 / Binder 규칙 [개발자용]</string>
+    <string name="section_binder_body">프록시 Binder 및 비동기 콜백을 제어해 백그라운드 깨움과 콜백 폭주를 줄입니다.</string>
+    <string name="section_extreme_title">해동 / Bump / 고부하 / 쿼터</string>
+    <string name="section_extreme_body">prevent / allow / serviceBump / high-loading / android-freeze / appQuota / strictMode 등의 고위험 항목을 포함합니다.</string>
+    <string name="proxy_semantic_title">프록시 / 배치(깨움 감소)</string>
+    <string name="proxy_semantic_body">proxyConfig / defaultProxyBc / proxySensor / proxyGps / proxyBtScan / proxyBinder 를 포함합니다.</string>
+    <string name="policy_section_title">시나리오 템플릿 및 제한 마스크 안내</string>
+    <string name="policy_section_body">SysBlackApp 시나리오 적중의 상한을 제어합니다. 개발자용 항목이며 일부 필드는 고급 편집이 필요합니다.</string>
+    <string name="policy_template_title">시나리오 템플릿: %1$s (scene=%2$s)</string>
+    <string name="policy_mask_title">제한 마스크: %1$s</string>
+    <string name="policy_technical_detail">group=%1$s</string>
+
+    <string name="module_detail_fast_freeze_skip_desc">Edit ffPkg type=black to skip fast freeze for selected packages.</string>
+    <string name="module_detail_whitelist_donot_desc">Edit DoNotFreeze exemption list.</string>
+    <string name="module_detail_whitelist_white100_desc">Edit whitePkg category=100 (third-party whitelist).</string>
+    <string name="module_detail_whitelist_im_desc">Edit IM special list (imPkg).</string>
+    <string name="module_detail_whitelist_cpuctl_desc">Edit CPUCtl whitelist (cpuCtlWhiteList).</string>
+    <string name="module_detail_whitelist_appcard_desc">Edit AppCard ignore list (appCard.ignoreApp).</string>
+    <string name="module_detail_whitelist_keepalive_desc">Quick Keep alive action.</string>
+    <string name="module_detail_sys_black_quick_desc">Open Suppress now quick action.</string>
+    <string name="module_detail_sys_black_lcdon_desc">Edit scene list: lcdon.</string>
+    <string name="module_detail_sys_black_lcdoff_desc">Edit scene list: lcdoff.</string>
+    <string name="module_detail_sys_black_night_desc">Edit scene list: night.</string>
+    <string name="module_detail_sys_black_policy_desc">Inspect advanced SysBlackPolicy/RestrictMask params.</string>
+    <string name="module_detail_proxy_global_desc">proxyConfig 전역 파라미터를 확인하고 편집합니다(고급 편집).</string>
+    <string name="module_detail_proxy_default_bc_desc">defaultProxyBc 브로드캐스트 동작을 확인하고 편집합니다(고급 편집).</string>
+    <string name="module_detail_proxy_bundle_desc">proxySensor / proxyGps / proxyBtScan / proxyBinder 등의 기능을 확인합니다(고급 편집).</string>
+    <string name="module_detail_bump_service_desc">Edit serviceBumpUnFzReasonList (high risk).</string>
+    <string name="module_detail_bump_prevent_desc">Edit prevent scene rules (high risk).</string>
+    <string name="module_detail_bump_allow_title">allow scene rules</string>
+    <string name="module_detail_bump_allow_desc">Edit allow scene rules (high risk).</string>
+    <string name="module_detail_bump_traffic_desc">trafficConfig has no dedicated editor yet; use the Advanced section.</string>
+    <string name="module_detail_high_load_loading_desc">Edit high-loading detection (high risk).</string>
+    <string name="module_detail_high_load_cpuctl_desc">Edit cpuCtlRus (high risk).</string>
+    <string name="module_detail_high_load_android_freeze_desc">Edit android-freeze linkage (high risk).</string>
+    <string name="module_detail_high_load_quota_desc">Edit appQuotaConfig (high risk).</string>
+    <string name="module_detail_high_load_strict_desc">Only edits strictMode enable; does not modify level.</string>
+
+
+    <string name="list_editor_import_clipboard">클립보드에서 가져오기</string>
+    <string name="list_editor_sort">정렬</string>
+    <string name="list_editor_clear">비우기</string>
+    <string name="staged_ok_count">임시 저장됨: %1$d개</string>
+    <string name="list_editor_save">임시 저장</string>
+    <string name="list_editor_edit_item">항목 수정</string>
+    <string name="list_editor_delete_item">항목 삭제</string>
+    <string name="list_editor_clipboard_empty">클립보드가 비어 있습니다</string>
+    <string name="list_editor_desc_service_bump">한 줄에 하나의 사유(예: bind/create/start)를 입력하세요. 사용자 정의 가능</string>
+    <string name="list_editor_desc_plain_tokens">한 줄에 하나의 토큰. 여러 줄 붙여넣기 지원, 중복 제거</string>
+    <string name="list_editor_desc_key_value_with_sample">key=value 형식이어야 합니다 (예: %1$s)</string>
+    <string name="list_editor_desc_csv_rule_with_sample">scene,pkg,mask,version,code 형식이어야 합니다 (pkg 필수). 예: %1$s</string>
+    <string name="list_editor_invalid_lines_count">유효하지 않은 입력 %1$d줄이 있습니다</string>
+    <string name="list_editor_invalid_key_value_missing_equal">%1$d번째 줄에 = 가 없습니다: %2$s</string>
+    <string name="list_editor_invalid_key_value_empty_key">%1$d번째 줄의 key가 비어 있습니다: %2$s</string>
+    <string name="list_editor_invalid_csv_too_few_columns">%1$d번째 줄의 CSV 열 수가 부족합니다(최소 2열): %2$s</string>
+    <string name="list_editor_invalid_csv_pkg_required">%1$d번째 줄의 pkg는 비워둘 수 없습니다: %2$s</string>
+    <string name="list_editor_desc_android_freeze_mixed_format">이 페이지는 두 가지 형식을 지원합니다:
+스위치: key=value (enable/whiteEnable/killWhiteEnable/sysAppExemptEnable만, true/false)
+예외 쿼터: pkg[,bgMode] (예: com.oplus.camera,256)</string>
+    <string name="list_editor_invalid_android_freeze_unknown_key">%1$d번째 줄: 알 수 없는 스위치 키(%2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_boolean">%1$d번째 줄: 스위치 값은 true/false 여야 합니다(현재: %2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_quota_columns">%1$d번째 줄: 예외 쿼터 형식이 잘못되었습니다(pkg 또는 pkg,bgMode만 허용): %2$s</string>
+    <string name="list_editor_invalid_android_freeze_invalid_pkg">%1$d번째 줄: 예외 쿼터 pkg가 잘못되었습니다(현재: %2$s)</string>
+    <string name="list_editor_invalid_android_freeze_invalid_bgmode">%1$d번째 줄: 예외 쿼터 bgMode는 숫자여야 합니다(현재: %2$s)</string>
+    <string name="edit_invalid_all_ignored">모든 입력이 유효하지 않아 변경을 무시하고 기존 임시 설정을 유지했습니다</string>
+    <string name="list_editor_import_result">%1$d개 가져왔습니다</string>
+    <string name="about_section_title">정보</string>
+    <string name="about_version_label">버전: </string>
+    <string name="about_author_label">작성자: </string>
+    <string name="author_name">Astor</string>
+    <string name="editor_spec_self_check_warning">개발자 점검: 현재 설정이 검증 결과와 일치하지 않습니다. 로그를 확인하세요.</string>
+    <string name="hook_config_source_value">Hook 구성 소스: %1$s</string>
+    <string name="hook_master_resolved_value">Master: %1$s (source=%2$s)</string>
+    <string name="hook_autostart_resolved_value">Autostart: %1$s (source=%2$s)</string>
+    <string name="hook_tombstone_resolved_value">Tombstone: %1$s (source=%2$s)</string>
+    <string name="hook_user_fact_value">사용자 구성 사실 존재: %1$s (%2$s)</string>
+    <string name="proxy_binder_desc_help">각 줄: desc=pkg1|pkg2 (pkg는 * 와일드카드 지원, 내부 구분자는 #).</string>
+    <string name="settings_diag_group">진단(읽기 전용)</string>
+    <string name="settings_experiments_group">실험 기능(단계적 배포)</string>
+    <string name="allow_pm_readconfig_observe">Phone Manager: readConfig 관찰만</string>
+    <string name="allow_pm_readconfig_modify">Phone Manager: readConfig 대체 허용(실험)</string>
+    <string name="allow_pm_fs_hook">Phone Manager: FS hook 허용(고위험)</string>
+    <string name="allow_sc_readconfig_observe">Safe Center: readConfig 관찰만</string>
+    <string name="allow_sc_readconfig_modify">Safe Center: readConfig 대체 허용(실험)</string>
+    <string name="allow_sc_fs_hook">Safe Center: FS hook 허용(고위험)</string>
+    <string name="cleanup_system_state_title">시스템 지속 구성 정리</string>
+    <string name="cleanup_system_state_message">persist.opch.* 시스템 속성과 /data/local/tmp/oplusconfighook 잔여 파일을 정리합니다.
+Root 권한이 필요합니다.
+
+앱 내부 설정은 삭제되지 않습니다. 정책 재적용 또는 재부팅이 필요합니다.</string>
+    <string name="cleanup_system_state_continue">계속 정리</string>
+    <string name="cleanup_system_state_running">정리 중…</string>
+    <string name="cleanup_system_state_button">시스템 지속 구성 정리(Root 필요)</string>
+    <string name="cleanup_system_state_hint">재설치 후 persist 속성과 외부 구성 잔여물을 정리합니다. 앱 내부 설정은 삭제하지 않습니다.</string>
+    <string name="cleanup_system_state_result">정리 완료: %1$d/%2$d(시스템 속성 + 외부 파일). 정책 재적용 또는 재부팅이 필요합니다.</string>
+    <string name="editor_render_failed_reopen">에디터 렌더링 실패. 다시 열어 주세요.</string>
+    <string name="editor_submit_host_not_found">제출 실패: 호스트를 찾을 수 없습니다.</string>
+    <string name="proxy_config_enable">config.enable</string>
+    <string name="proxy_sensor_proxy_pkg_hint">proxyPkg(한 줄에 패키지 1개, 제출 시 | 로 병합)</string>
+    <string name="proxy_sensor_proxy_type_hint">proxyType(한 줄에 typeName 1개)</string>
+    <string name="proxy_sensor_white_type_pkg_hint">whiteTypePkg(한 줄 형식: type=pkg1|pkg2)</string>
+    <string name="proxy_sensor_invalid_proxy_pkg">proxyPkg에 잘못된 패키지: %1$s</string>
+    <string name="proxy_sensor_invalid_white_type_pkg">whiteTypePkg에 잘못된 패키지: %1$s</string>
+    <string name="proxy_binder_invalid_pkg">descConfig에 잘못된 패키지: %1$s</string>
+    <string name="scene_token_lcdon">lcdon</string>
+    <string name="scene_token_lcdoff">lcdoff</string>
+    <string name="scene_token_night">night</string>
+    <string name="proxy_occurrence_suffix"> (일치 항목=%1$d, 업데이트 예정=%2$d)</string>
+    <string name="proxy_sensor_summary">사용=%1$s, proxyType=%2$s, proxyPkg=%3$s, type 수=%4$d, whiteRules=%5$d%6$s</string>
+    <string name="proxy_binder_summary">사용=%1$s, descRules=%2$d%3$s</string>
+</resources>

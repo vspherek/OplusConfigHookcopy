@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:width="28dp" android:height="28dp"/>
+            <solid android:color="#DCE1E7"/>
+        </shape>
+    </item>
+    <item android:gravity="center" android:drawable="@drawable/ic_nav_settings_glyph"/>
+</layer-list>

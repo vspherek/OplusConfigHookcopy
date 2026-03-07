@@ -1,0 +1,538 @@
+<resources>
+    <string name="app_name">OplusConfigHook</string>
+    <string name="tab_tombstone">墓碑（后台冻结）</string>
+    <string name="tab_autostart">自启管理</string>
+    <string name="tab_settings">设置</string>
+    <string name="tab_recommended">推荐</string>
+    <string name="tab_advanced">高级</string>
+
+    <string name="image_placeholder">占位图片</string>
+    <string name="free_notice_title">这是一个免费开源软件</string>
+    <string name="free_notice_message">这份奇迹与魔法是免费的，如果你花了钱那你上当了！</string>
+    <string name="open_project_homepage">项目主页</string>
+    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+
+    <string name="enable_replacement">启用替换</string>
+    <string name="enable_autostart_replacement">启用自启替换</string>
+    <string name="enable_tombstone_replacement">启用后台冻结策略替换</string>
+    <string name="allow_android_fs_hook">允许在 Android 进程启用文件替换（高风险）</string>
+    <string name="debug_force_master">调试：强制 master=true（临时）</string>
+    <string name="log_stack">记录堆栈</string>
+    <string name="log_only_matches">仅记录命中项</string>
+
+    <string name="autostart_policy_desc">编辑自启白名单（txt 每行一个包名）。</string>
+    <string name="tombstone_policy_desc">安全编辑后台冻结策略列表与场景黑名单。</string>
+    <string name="current_source_value">当前来源：%1$s</string>
+    <string name="source_user">用户策略</string>
+    <string name="source_asset">内置默认</string>
+
+    <string name="import_txt">导入 txt</string>
+    <string name="import_xml">导入 xml</string>
+    <string name="export_policy">导出</string>
+    <string name="apply_policy">应用策略</string>
+    <string name="restore_default">恢复默认</string>
+    <string name="edit_by_checked_apps">按勾选应用修改</string>
+    <string name="staged_not_applied">已暂存，未应用。</string>
+
+    <string name="import_failed">导入失败</string>
+    <string name="import_failed_reason">导入失败：%1$s</string>
+    <string name="export_failed_reason">操作失败：%1$s</string>
+    <string name="export_success">导出完成</string>
+    <string name="autostart_invalid">自启文件为空或只有注释。</string>
+    <string name="policy_applied">策略已应用并刷新缓存。</string>
+
+    <string name="scene_params_readonly">场景参数（只读，不建议普通用户修改）</string>
+    <string name="scene_blacklist_title">按场景纳入冻结</string>
+    <string name="scene_count_value">%1$d 个应用</string>
+    <string name="global_whitelist_title">全局优待与豁免</string>
+    <string name="freeze_allow_friendly">启动冻结链路白名单（高级）
+仅影响特定启动/冻结链路策略，不等于全局不冻结或常驻保活。</string>
+    <string name="donot_freeze_friendly">不冻结（仅影响 nativeconfig/dex2oat 冻结链路，不等于全局保活）。更倾向常驻后台，不进入冻结（更耗电/占内存）。谨慎使用。</string>
+    <string name="more">更多</string>
+    <string name="edit">编辑</string>
+
+    <string name="search_apps_hint">搜索应用名或包名</string>
+    <string name="system_app">系统应用</string>
+    <string name="add">添加</string>
+    <string name="confirm_stage">确认</string>
+    <string name="cancel">取消</string>
+
+    <string name="donation_entry">赞赏支持</string>
+    <string name="donation_qr_title">赞赏二维码</string>
+    <string name="wallet_address_label">钱包地址</string>
+    <string name="wallet_eth_address">0x1234567890ABCDEF1234567890ABCDEF12345678</string>
+    <string name="copy">复制</string>
+    <string name="share">分享</string>
+    <string name="wallet_copy_success">地址已复制</string>
+    <string name="wallet_share_text">支持项目：%1$s</string>
+    <string name="wallet_share_chooser">分享钱包地址</string>
+    <string name="donation_security_notice">请核对地址来源，谨防钓鱼。</string>
+
+    <string name="scene_params_editable">场景参数（风险项，若需修改请在设置中开启高级编辑）</string>
+    <string name="reset_scene">恢复默认值</string>
+    <string name="modified_not_applied">已修改但未应用</string>
+    <string name="tombstone_dirty_badge">• 有未应用更改</string>
+    <string name="filter">筛选</string>
+    <string name="sort">排序</string>
+    <string name="filter_all_apps">显示全部</string>
+    <string name="filter_user_apps">仅用户应用</string>
+    <string name="filter_system_apps">仅系统应用</string>
+    <string name="filter_state_value">筛选：%1$s</string>
+    <string name="sort_by_label">按应用名排序</string>
+    <string name="sort_by_package">按包名排序</string>
+    <string name="sort_by_install_time">按安装时间排序</string>
+    <string name="sort_by_update_time">按更新时间排序</string>
+    <string name="sort_descending">倒序</string>
+    <string name="tombstone_param_scene_title">scene 参数说明</string>
+    <string name="tombstone_param_scene_body">scene 表示策略场景编号，用于区分不同系统状态（如亮屏、灭屏、夜间、充电等）。
+该值通常由系统预设，不建议随意修改。
+
+修改错误可能导致策略失效或行为异常。</string>
+    <string name="tombstone_param_mask_title">mask 参数说明</string>
+    <string name="tombstone_param_mask_body">mask 是策略位掩码，用于控制具体启用哪些冻结规则。
+不同 ROM 的 mask 含义可能不同，通常表现为二进制或数字组合。
+
+除非你明确知道其作用，否则建议保持默认值。</string>
+    <string name="tombstone_param_quota_title">quota 参数说明</string>
+    <string name="tombstone_param_quota_body">quota 表示配额或触发阈值，可能影响后台冻结的频率或条件。
+
+较大的值可能降低冻结概率，
+较小的值可能导致应用更容易被限制。</string>
+    <string name="tombstone_param_bgmode_title">bgMode 参数说明</string>
+    <string name="tombstone_param_bgmode_body">bgMode 表示后台策略模式编号，用于区分不同冻结策略行为。
+
+不同模式的具体含义属于系统内部实现，
+修改后可能影响后台存活能力或耗电情况。</string>
+    <string name="tombstone_param_fgsexempt_title">fgsExempt 参数说明</string>
+    <string name="tombstone_param_fgsexempt_body">fgsExempt 表示前台服务豁免开关。
+
+启用后，应用在使用前台服务时可能更不容易被系统限制，
+但也可能增加耗电。</string>
+    <string name="tombstone_param_risk_notice">⚠ 修改这些参数可能导致后台策略异常或耗电增加，请自行承担风险。</string>
+    <string name="tombstone_param_dialog_ok">我知道了</string>
+
+    <string name="advanced_policy_edit">高级编辑（高风险）</string>
+    <string name="policy_group_sys_black_policy">策略参数（SysBlackPolicy）</string>
+    <string name="policy_group_sys_black_restrict">限制掩码（SysBlackRestrictMask）</string>
+    <string name="app_picker_loading_apps">正在加载应用列表…</string>
+    <string name="app_picker_load_failed">应用列表加载失败。</string>
+    <string name="filter_checked_all">全部</string>
+    <string name="filter_checked_only">已勾选</string>
+    <string name="filter_unchecked_only">未勾选</string>
+    <string name="enable_advanced_editing_hint">如需修改该字段，请先在设置中开启高级编辑。</string>
+    <string name="tombstone_freeze_help">此页面用于控制后台冻结策略。修改可能影响通知、后台任务与耗电表现，风险自负。</string>
+    <string name="scene_info_lcdon_title">lcdon</string>
+    <string name="scene_info_lcdon_body">基于字段命名与常见电源管理语义推断：lcdon 下参数可能在亮屏条件生效。具体行为以系统实现为准。</string>
+    <string name="scene_info_lcdoff_title">lcdoff</string>
+    <string name="scene_info_lcdoff_body">基于字段命名与常见电源管理语义推断：lcdoff 下参数可能在熄屏条件生效。具体行为以系统实现为准。</string>
+    <string name="scene_info_night_title">night</string>
+    <string name="scene_info_night_body">基于字段命名与常见电源管理语义推断：night 下参数可能与夜间/睡眠时段相关。具体行为以系统实现为准。</string>
+    <string name="scene_info_charging_title">charging</string>
+    <string name="scene_info_charging_body">基于字段命名与常见电源管理语义推断：charging 下参数可能在充电条件生效。厂商策略可能更激进或更保守。具体行为以系统实现为准。</string>
+    <string name="scene_info_extremefg_title">extremeFg</string>
+    <string name="scene_info_extremefg_body">基于字段命名与常见电源管理语义推断：extremeFg 可能表示前台活跃分组，对活跃应用可能更严格或更宽松。具体行为以系统实现为准。</string>
+    <string name="scene_info_fastfreeze_title">fastFreeze</string>
+    <string name="scene_info_fastfreeze_body">基于字段命名与常见电源管理语义推断：fastFreeze 可能用于更快进入冻结、缩短等待时间。具体行为以系统实现为准。</string>
+    <string name="scene_info_minsystem_title">minSystem</string>
+    <string name="scene_info_minsystem_body">基于字段命名与常见电源管理语义推断：minSystem 可能用于保证关键系统组件不被误冻。具体行为以系统实现为准。</string>
+    <string name="tombstone_title">冻结策略（后台）</string>
+    <string name="reset_default">恢复默认值</string>
+    <string name="advanced_editing">高级编辑</string>
+    <string name="advanced_editing_desc">允许编辑原始数值。错误修改可能影响通知与后台任务。</string>
+    <string name="advanced_editing_required">若需修改请在设置中开启“高级编辑”。</string>
+    <string name="unit_ms">ms</string>
+    <string name="unit_s">秒</string>
+    <string name="unit_raw">原始值</string>
+    <string name="approx_prefix">约</string>
+    <string name="unit_example_hint">示例换算（仅供参考）</string>
+    <string name="unit_unknown_hint">该字段单位不明确，系统实际解释可能不同。</string>
+    <string name="scenario_params_risky">场景参数（风险项，若需修改请在设置中开启高级编辑）</string>
+    <string name="hint_inference_disclaimer">说明基于字段命名与常见电源管理语义推断，具体行为以 ROM 实现为准。</string>
+    <string name="hint_lcdon">屏幕点亮时生效，通常影响进入冻结前的延迟或检查周期。</string>
+    <string name="hint_lcdoff">屏幕熄灭时生效，通常更激进，可能更快进入冻结。</string>
+    <string name="hint_night">夜间/睡眠时段生效，可能与定时省电策略相关。</string>
+    <string name="hint_charging">充电中生效，系统可能采用不同的冻结强度。</string>
+    <string name="hint_extremefg">“极端前台/强前台”条件或分组，可能改变前台/活跃应用的处理方式。</string>
+    <string name="hint_fastfreeze">快速冻结路径，可能缩短进入冻结的等待时间。</string>
+    <string name="hint_minsystem">系统最小保护/白名单阈值，可能避免关键系统组件被误冻。</string>
+    <string name="unit_example_both">若单位为毫秒：%1$s ≈ %2$s 秒；若单位为秒：%1$s ≈ %3$s 小时。</string>
+    <string name="invalid_number_value">数值格式错误：%1$s</string>
+    <string name="large_value_risk_hint">检测到较大数值，请再次确认单位与行为风险。</string>
+    <string name="field_lcdOff_ffInterval">lcdOffConfig.ffInterval</string>
+    <string name="field_tip_lcdOff_ffInterval">Fast-freeze interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_interval">lcdOffConfig.interval</string>
+    <string name="field_tip_lcdOff_interval">Regular interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_ffTotal">lcdOffConfig.ffTotal</string>
+    <string name="field_tip_lcdOff_ffTotal">Total FF count (not a time field).</string>
+    <string name="field_lcdOn_RToM">lcdOnConfig.RToM</string>
+    <string name="field_tip_lcdOn_RToM">RToM transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_MToF">lcdOnConfig.MToF</string>
+    <string name="field_tip_lcdOn_MToF">MToF transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_checkImportance">lcdOnConfig.checkImportance</string>
+    <string name="field_tip_lcdOn_checkImportance">Importance check interval in lcdOnConfig.</string>
+    <string name="field_ff_enterTimeout">ffConfig.enterTimeout</string>
+    <string name="field_tip_ff_enterTimeout">Fast-freeze enter timeout.</string>
+    <string name="field_ff_interval">ffConfig.interval</string>
+    <string name="field_tip_ff_interval">Fast-freeze interval.</string>
+    <string name="field_ff_maxFzNum">ffConfig.maxFzNum</string>
+    <string name="field_tip_ff_maxFzNum">Maximum freeze count (not a time field).</string>
+    <string name="field_powerSave_repeatTime">powerSaveConfig.repeatTime</string>
+    <string name="field_tip_powerSave_repeatTime">Power save repeat time.</string>
+    <string name="field_traffic_interval">trafficConfig.interval</string>
+    <string name="field_tip_traffic_interval">Traffic check interval.</string>
+    <string name="field_traffic_unfreeze">trafficConfig.trafficUnfreezeTime</string>
+    <string name="field_tip_traffic_unfreeze">Unfreeze duration for traffic condition.</string>
+    <string name="field_api_upper">ApiTimeoutConfig.upperTimeout</string>
+    <string name="field_tip_api_upper">Upper API timeout.</string>
+    <string name="field_api_floor">ApiTimeoutConfig.floorTimeout</string>
+    <string name="field_tip_api_floor">Lower API timeout.</string>
+    <string name="field_query_interval">queryUsageStatsConfig.queryIntervalTime</string>
+    <string name="field_tip_query_interval">Usage stats query interval.</string>
+    <string name="field_query_messageDelay">queryUsageStatsConfig.messageDelayTime</string>
+    <string name="field_tip_query_messageDelay">Message delay time.</string>
+    <string name="field_query_repeatCount">queryUsageStatsConfig.messageRepeateCount</string>
+    <string name="field_tip_query_repeatCount">Message repeat count (not a time field).</string>
+    <string name="field_forceProxy_gpsInterval">screenOffStillForceProxyConfig.gpsInterval</string>
+    <string name="field_tip_forceProxy_gpsInterval">GPS interval for screen-off still force-proxy config.</string>
+    <string name="field_forceProxy_defaultInterval">screenOffStillForceProxyConfig.defaultInterval</string>
+    <string name="field_tip_forceProxy_defaultInterval">Default interval for screen-off still force-proxy config.</string>
+    <string name="field_freeze_guardTime">freezeInterval.guardTime</string>
+    <string name="field_tip_freeze_guardTime">Guard time in freezeInterval.</string>
+    <string name="field_freeze_RToM">freezeInterval.RToM</string>
+    <string name="field_tip_freeze_RToM">RToM transition in freezeInterval.</string>
+    <string name="field_freeze_RToMST">freezeInterval.RToMST</string>
+    <string name="field_tip_freeze_RToMST">RToMST transition in freezeInterval.</string>
+    <string name="field_freeze_MToF">freezeInterval.MToF</string>
+    <string name="field_tip_freeze_MToF">MToF transition in freezeInterval.</string>
+    <string name="field_freeze_MToFST">freezeInterval.MToFST</string>
+    <string name="field_tip_freeze_MToFST">MToFST transition in freezeInterval.</string>
+    <string name="field_freeze_checkImportance">freezeInterval.checkImportance</string>
+    <string name="field_tip_freeze_checkImportance">Importance check interval in freezeInterval.</string>
+    <string name="app_picker_invalid_launch_fallback">启动参数异常，已回退为空选择。</string>
+    <string name="app_picker_open_failed">无法打开应用列表编辑器。</string>
+    <string name="export_logs">导出日志</string>
+    <string name="copy_last_crash">复制最近崩溃堆栈</string>
+    <string name="export_logs_success">日志已导出</string>
+    <string name="no_crash_log">暂无崩溃日志</string>
+    <string name="copy_crash_success">崩溃堆栈已复制</string>
+    <string name="tombstone_inspector">检查应用</string>
+    <string name="tombstone_inspector_hint">输入包名检查其在冻结主链路与特判规则中的命中情况。</string>
+    <string name="special_handling">特判与豁免</string>
+    <string name="special_im_pkg_title">IM 特判（imPkg）</string>
+    <string name="special_cpu_ctl_title">CPU 控制白名单（cpuCtlWhiteList）</string>
+    <string name="special_app_card_title">AppCard 忽略列表（appCard.ignoreApp）</string>
+    <string name="special_pkg_config_title">特性集合（pkgConfig，默认只读）</string>
+    <string name="special_cpn_title">组件/Binder 规则（cpnAsyncBinder）</string>
+    <string name="special_im_pkg_explain">IM 特判：标记为即时通讯类，系统可能对通知/保活/冻结做特殊处理（更不容易被压制）。</string>
+    <string name="special_cpu_ctl_explain">CPU 控制豁免：该应用在 CPU 异常限制/降级策略中更少被干预（更不容易被限制）。</string>
+    <string name="special_app_card_explain">后台卡片忽略：该应用可能被后台管理流程忽略，从而更不容易被回收或冻结。</string>
+    <string name="high_risk_readonly">高风险：默认只读。错误修改可能影响系统通信行为。</string>
+    <string name="not_configured">未配置</string>
+    <string name="inspector_result_summary">可安全编辑：%1$d
+谨慎：%2$d
+高风险：%3$d</string>
+    <string name="advanced_editing_confirm">开启开发者编辑可能导致 ROM 行为异常，是否继续？</string>
+    <string name="quick_actions">快捷操作</string>
+    <string name="quick_suppress">秒冻（压制）</string>
+    <string name="quick_keep_alive">保活（优待）</string>
+    <string name="quick_actions_hint">该操作仅暂存更改，需点击“应用策略”才会生效。</string>
+    <string name="freeze_timing">冻结延迟(Freeze timing)</string>
+    <string name="freeze_timing_explain">单位：毫秒（ms）。这些阈值控制运行→迁移→冻结的时机。</string>
+    <string name="field_freeze_guard_title">冻结前保护时间 (guardTime)</string>
+    <string name="field_freeze_rtom_title">运行到中间阈值 (RToM)</string>
+    <string name="field_freeze_rtomst_title">运行到中间严格阈值 (RToMST)</string>
+    <string name="field_freeze_mtof_title">中间到冻结阈值 (MToF)</string>
+    <string name="field_freeze_mtofst_title">中间到冻结严格阈值 (MToFST)</string>
+    <string name="field_freeze_check_title">重要性检查间隔 (checkImportance)</string>
+    <string name="inspector_pkg_label">已选应用</string>
+    <string name="inspector_pkg_helper">例如：com.tencent.mm</string>
+    <string name="select_app">选择应用</string>
+    <string name="inspector_only_editable">仅显示可编辑项</string>
+    <string name="inspector_group_mainline">冻结主链路</string>
+    <string name="inspector_group_special">特判与豁免</string>
+    <string name="inspector_group_feature">特性集合（pkgConfig）</string>
+    <string name="inspector_group_binder">组件/Binder 规则</string>
+    <string name="special_pkg_config_explain">特性集合：category 是位掩码开关集合。编辑包名 token 会改变系统行为。</string>
+    <string name="special_cpn_explain">组件/Binder 规则影响系统通信接口。误改可能导致系统功能异常。</string>
+    <string name="inspector_mainline_explain">此项在冻结主链路中，可能直接影响冻结行为。</string>
+    <string name="risk_confirm_required">需开启开发者模式并进行风险确认后才可编辑。</string>
+    <string name="quick_preview_suppress">已暂存：移除优待名单、加入场景冻结，并同步 guardTime/RToM/RToMST/MToF/MToFST 为 0。</string>
+    <string name="quick_preview_keep_alive">已暂存：按勾选项将所选应用加入对应保活名单。</string>
+    <string name="remove">移除</string>
+    <string name="restore">恢复</string>
+    <string name="inspector_empty_hint">请选择应用后查看命中结果</string>
+    <string name="freeze_timing_hint_once">数值单位为毫秒（ms）。</string>
+    <string name="why_affect_my_app">为什么会影响我关心的应用？</string>
+    <string name="why_affect_my_app_body">appType=4 在 appTypeConfig 中对应 net，但应用归类由 ROM 运行时判断。XML 并未提供 freezeInterval 到包名列表的显式映射。若需包级控制，请使用检查应用和包级规则区。</string>
+    <string name="mode_high_extreme">高强度模式 (highExtremeMode)</string>
+    <string name="mode_extreme">极限模式 (extremeMode)</string>
+    <string name="mode_high_perf">高性能模式 (highPerfMode)</string>
+    <string name="mode_high_load_l3">高负载模式 (highLoadMode, level=3)</string>
+    <string name="mode_high_load_l1">高负载模式 (highLoadMode, level=1)</string>
+    <string name="app_type_general">通用应用 (appType=1000)</string>
+    <string name="app_type_net">网络相关 (appType=4)</string>
+    <string name="app_type_net_combo">网络/组合 (appType=4#7)</string>
+    <string name="advanced_fields">高级字段</string>
+    <string name="freeze_timing_explain_no_unit">这些阈值控制运行→迁移→冻结时序。</string>
+    <string name="inspector_placeholder_pick_app">点击此处选择应用</string>
+    <string name="why_affect_key_points">要点</string>
+    <string name="why_affect_point_1">• appType=4 对应 net（来自 appTypeConfig）</string>
+    <string name="why_affect_point_2">• 应用归类由 ROM 运行时判断</string>
+    <string name="why_affect_point_3">• XML 未提供 freezeInterval → 包名的显式映射</string>
+    <string name="why_affect_jump">跳转</string>
+    <string name="why_affect_open_inspector">打开“检查应用”</string>
+    <string name="why_affect_open_package_rules">打开“包级规则/名单”（SysBlackApp/sysBlack/allow/donot-freeze/特判与豁免）</string>
+    <string name="scene_blacklist_explain">加入后，系统在该场景更倾向于对应用执行后台冻结/限制。</string>
+    <string name="global_whitelist_explain">按需配置弱优待与强豁免，平衡体验与功耗。</string>
+    <string name="scene_lcdon">亮屏（lcdon）</string>
+    <string name="scene_lcdoff">熄屏（lcdoff）</string>
+    <string name="scene_night">夜间（night）</string>
+    <string name="edit_section_list">编辑</string>
+    <string name="quick_suppress_notice">该快捷操作会同步参数为：guardTime=0, RToM=0, RToMST=0, MToF=0, MToFST=0（checkImportance 不变）。</string>
+    <string name="quick_keep_alive_notice">保活会尝试：从 SysBlackApp 场景冻结移除、在支持时加入 ffPkg.black/whitePkg.category=100，并加入你勾选的其他名单。改动仅暂存，点击“应用策略”后落盘。</string>
+    <string name="quick_target_donot_freeze">donot_freeze_app_list（不冻结）</string>
+    <string name="quick_target_freeze_allow">freeze_allow_list（启动冻结链路白名单）</string>
+    <string name="ff_skip_title">快冻跳过名单（ffPkg.black）</string>
+    <string name="ff_skip_explain">加入后 fast freezer 会跳过该应用的快速冻结，更保活但可能更耗电。</string>
+    <string name="white_third_title">第三方白名单（whitePkg.category=100）</string>
+    <string name="white_third_explain">加入后系统更倾向对白名单应用放宽冻结/代理；更保活但可能更耗电。</string>
+    <string name="back_to_top">回到顶部</string>
+    <string name="autostart_actions_title">策略操作</string>
+    <string name="settings_basic_group">功能开关</string>
+    <string name="settings_tools_group">工具与支持</string>
+    <string name="tombstone_actions_title">策略操作与应用</string>
+    <string name="ms_only_hint">单位：毫秒（ms）。</string>
+    <string name="tombstone_io_apply">应用策略与导入/导出</string>
+
+    <string name="special_enable_config_title">全局开关（enableConfig）</string>
+    <string name="special_enable_config_explain">enableConfig 中的 hans/gms 等全局开关，影响全局策略行为。</string>
+    <string name="special_gms_title">GMS 列表（gms）</string>
+    <string name="special_gms_explain">ROM 策略使用的 GMS 包名单。</string>
+    <string name="special_ff_skip_title">快冻跳过名单（ffPkg.black）</string>
+    <string name="special_ff_skip_explain">让选中应用跳过 fastfreeze。</string>
+    <string name="special_white_100_title">关键白名单（whitePkg.100）</string>
+    <string name="special_white_100_explain">category=100 的关键白名单。</string>
+    <string name="special_white_010_title">系统/OPlus 白名单（whitePkg.010）</string>
+    <string name="special_white_010_explain">category=010 的系统侧白名单。</string>
+    <string name="special_white_001_title">第三方白名单（whitePkg.001）</string>
+    <string name="special_white_001_explain">category=001 的第三方白名单。</string>
+    <string name="special_black_hans_title">blackHansPkg 列表</string>
+    <string name="special_black_hans_explain">blackHansPkg 的 enable 开关与 pkg token 列表。</string>
+    <string name="quick_target_ff_skip">跳过快冻（ffPkg.black）</string>
+    <string name="quick_target_white_100">关键白名单（whitePkg.100）</string>
+    <string name="proxy_section_title">Proxy &amp; Batch</string>
+    <string name="proxy_global_title">Proxy global config (proxyConfig)</string>
+    <string name="proxy_default_bc_title">Default proxy broadcast actions</string>
+    <string name="proxy_default_bc_explain">Edit defaultProxyBc action list (all occurrences).</string>
+    <string name="proxy_sensor_type_title">Proxy sensor type names</string>
+    <string name="proxy_sensor_type_explain">Edit proxySensor/proxyType list.</string>
+    <string name="proxy_gps_title">GPS 代理</string>
+    <string name="proxy_gps_explain">配置 proxyGps 开关与 item 的包名匹配规则。</string>
+    <string name="proxy_bt_scan_title">蓝牙扫描代理</string>
+    <string name="proxy_bt_scan_explain">控制 proxyBtScan 代理开关。</string>
+    <string name="proxy_binder_title">Binder 代理</string>
+    <string name="proxy_binder_explain">配置 proxyBinder 中 descConfig 的包名匹配规则。</string>
+    <string name="v3c_service_bump_title">Service bump unfreeze reasons</string>
+    <string name="v3c_prevent_title">Hard prevent rules (prevent)</string>
+    <string name="v3c_allow_title">Hard allow rules (allow)</string>
+    <string name="v3c_android_freeze_title">Android freeze linkage</string>
+    <string name="v3c_app_quota_title">App quota continuous task config</string>
+    <string name="v3c_high_loading_title">High-loading config</string>
+    <string name="v3c_cpu_ctl_rus_title">CPU control RUS config</string>
+    <string name="proxy_sensor_title">Proxy Sensor</string>
+    <string name="proxy_sensor_explain">proxySensor whiteTypePkg pkg rules.</string>
+    <string name="quick_suppress_notice_v3">默认：移除优待/豁免名单，并将所选应用加入场景冻结（lcdon/lcdoff/night）。
+
+仅在开启「高级编辑」时，可额外勾选“同步冻结时序参数为 0（全局，高风险）”。该项按 L1/L2/L3 仅将 freezeInterval 内已存在字段置 0，不新增字段，且不修改 checkImportance。</string>
+    <string name="quick_suppress_timing_enable">同步冻结时序参数为 0（全局，高风险）</string>
+    <string name="quick_suppress_timing_help_l1">L1：将 freezeInterval{highExtremeMode:*:1000} 的 guardTime/RToM/RToMST/MToF/MToFST 设为 0（仅修改已存在字段）。不修改 checkImportance。</string>
+    <string name="quick_suppress_timing_help_l2">L2：将 freezeInterval{highExtremeMode|extremeMode|highPerfMode|highLoadMode:*:1000} 的 guardTime/RToM/RToMST/MToF/MToFST 设为 0（仅修改已存在字段）。不修改 checkImportance。</string>
+    <string name="quick_suppress_timing_help_l3">L3：在 L2 基础上，appType 扩展到 1000/4/7/4#7。仅修改已存在字段。不修改 checkImportance。</string>
+    <string name="quick_suppress_timing_help_disabled">未启用冻结时序同步。</string>
+    <string name="quick_preview_suppress_basic">已暂存：移除优待/豁免名单，并加入场景冻结目标。</string>
+    <string name="quick_preview_suppress_with_timing">已暂存：移除优待/豁免名单并加入场景冻结目标；额外将 freezeInterval 关键冻结参数同步为 0（全局高风险）。</string>
+    <string name="quick_suppress_timing_profile_l1">L1（保守时序档位）：highExtremeMode + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l2">L2（均衡时序档位）：highExtreme/extreme/highPerf/highLoad + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l3">L3（激进时序档位）：L2 + appType=1000/4/7/4#7</string>
+    <string name="quick_suppress_timing_profile_l1_short">L1</string>
+    <string name="quick_suppress_timing_profile_l2_short">L2</string>
+    <string name="quick_suppress_timing_profile_l3_short">L3</string>
+    <string name="quick_preview_suppress_with_timing_profile">已暂存：移除优待/豁免名单并加入场景冻结目标；额外应用“%1$s”时序档位（全局高风险）。</string>
+    <string name="policy_group_multiple_unsupported">检测到多个 policy group。为避免只写一处导致策略损坏，已阻止应用。</string>
+
+    <string name="module_fast_freeze_title">Fast Freeze(快冻)</string>
+    <string name="module_fast_freeze_desc">控制哪些应用跳过快冻，避免误伤常驻能力。</string>
+    <string name="module_whitelist_title">Critical Allow / Whitelist(豁免/白名单)</string>
+    <string name="module_whitelist_desc">集中管理全局优待、IM 与 CPU 等关键豁免名单。</string>
+    <string name="module_sys_black_title">Sys Black Governance(系统黑管控)</string>
+    <string name="module_sys_black_desc">按亮屏/熄屏/夜间场景决定更积极的冻结对象。</string>
+    <string name="module_proxy_title">Proxy / Batch(代理与批处理)</string>
+    <string name="module_proxy_desc">聚合代理开关、广播默认行为与批处理规则入口。</string>
+    <string name="module_bump_title">Unfreeze / Bump(解冻兜底)</string>
+    <string name="module_bump_desc">配置服务解冻原因与兜底规则，降低误冻影响。</string>
+    <string name="module_high_load_title">High Load / Strict / Quota(高负载/严格控制/配额)</string>
+    <string name="module_high_load_desc">用于高负载与严格治理场景，需谨慎操作。</string>
+    <string name="module_action_config">配置</string>
+    <string name="module_action_advanced">高级设置</string>
+    <string name="module_supported">支持</string>
+    <string name="module_not_supported">不支持</string>
+    <string name="module_parsed_editable">已解析/可编辑</string>
+    <string name="module_not_supported_ff">当前策略不支持 ffPkg.black</string>
+    <string name="module_menu_fast_freeze_skip">跳过快冻名单(skip fastfreeze)</string>
+    <string name="module_menu_fast_freeze_explain">查看并定位快冻相关参数（高级）</string>
+    <string name="module_menu_whitelist_donot">全局优待与豁免(DoNotFreeze)</string>
+    <string name="module_menu_whitelist_white100">whitePkg(第三方白名单，category=100)</string>
+    <string name="module_menu_whitelist_im">IM 特判(imPkg)</string>
+    <string name="module_menu_whitelist_cpuctl">CPU 控制白名单(cpuCtlWhiteList)</string>
+    <string name="module_menu_whitelist_appcard">AppCard 忽略列表(appCard.ignoreApp)</string>
+    <string name="module_menu_whitelist_keep_alive">保活(优待)快捷操作</string>
+    <string name="module_menu_sys_black_quick">秒冻(压制)</string>
+    <string name="module_menu_sys_black_lcdon">按场景纳入冻结：亮屏(lcdon)</string>
+    <string name="module_menu_sys_black_lcdoff">按场景纳入冻结：熄屏(lcdoff)</string>
+    <string name="module_menu_sys_black_night">按场景纳入冻结：夜间(night)</string>
+    <string name="module_menu_sys_black_policy">场景参数(SysBlackPolicy/RestrictMask)</string>
+    <string name="module_menu_proxy_global">(高级)Proxy 全局开关与参数(proxyConfig)</string>
+    <string name="module_menu_proxy_default_bc">(高级)默认代理广播(defaultProxyBc)</string>
+    <string name="module_menu_proxy_exclude">(高级)广播排除规则(proxyBcExcludeAction/Rules)</string>
+    <string name="module_menu_proxy_bundle">(高级)Wakelock / GPS / Sensor / Binder / BtScan</string>
+    <string name="module_menu_bump_service">Service 解冻原因(serviceBumpUnFzReasonList)</string>
+    <string name="module_menu_bump_rules">硬规则：prevent/allow(高风险)</string>
+    <string name="module_menu_bump_traffic">网络兜底(trafficConfig)</string>
+    <string name="module_menu_highload_loading">高负载检测(high-loading)</string>
+    <string name="module_menu_highload_cpuctl">CPU 异常治理(cpuCtlRus)</string>
+    <string name="module_menu_highload_android_freeze">AOSP Freeze 联动(android-freeze)</string>
+    <string name="module_menu_highload_quota">任务配额(appQuotaConfig)</string>
+    <string name="module_menu_highload_strict">StrictMode 开关(仅 enable)</string>
+    <string name="module_summary_fast_freeze">skip fastfreeze：%1$d 个应用；ffPkg.black：%2$s</string>
+    <string name="module_summary_whitelist">DoNotFreeze=%1$d；whitePkg(100)=%2$d；IM=%3$d；CPU=%4$d；AppCard=%5$d</string>
+    <string name="module_summary_sys_black">lcdon=%1$d；lcdoff=%2$d；night=%3$d</string>
+    <string name="module_summary_proxy">proxyConfig：%1$s；规则：%2$d</string>
+    <string name="module_summary_bump">serviceBump=%1$d；prevent=%2$d；allow=%3$d</string>
+    <string name="module_summary_high_load">high-loading=%1$s；android-freeze=%2$s；quota(max)=%3$s</string>
+
+    <string name="enabled">已启用</string>
+    <string name="disabled">已禁用</string>
+
+
+    <string name="module_detail_open_advanced">查看全部高级项</string>
+    <string name="close">关闭</string>
+    <string name="expand">展开</string>
+    <string name="collapse">收起</string>
+
+    <string name="section_enable_config_title">全局开关（enableConfig）</string>
+    <string name="section_enable_config_body">影响 hans/gms 等总开关；修改需谨慎。</string>
+    <string name="section_whitelist_title">豁免/白名单（影响冻结命中）</string>
+    <string name="section_whitelist_body">对应 doNotFreeze/whitePkg/imPkg/cpuCtl/appCard/gms/ffPkg.black 等落点。</string>
+    <string name="section_pkg_config_title">按包覆盖：特性集合（pkgConfig）【开发者向】</string>
+    <string name="section_pkg_config_body">按包粒度覆盖开关/位掩码；可展开查看真实节点名与关键属性。</string>
+    <string name="section_binder_title">组件/Binder 规则【开发者向】</string>
+    <string name="section_binder_body">用于控制代理 Binder/异步回调，降低后台唤醒与回调风暴风险。</string>
+    <string name="section_extreme_title">兜底与极端（Bump/HighLoad/Quota）</string>
+    <string name="section_extreme_body">包含 prevent/allow/serviceBump/high-loading/android-freeze/appQuota/strictMode 等高风险项。</string>
+    <string name="proxy_semantic_title">代理与批处理（减少唤醒）</string>
+    <string name="proxy_semantic_body">落点包括 proxyConfig/defaultProxyBc/proxySensor/proxyGps/proxyBtScan/proxyBinder。</string>
+    <string name="policy_section_title">场景模板与限制掩码说明</string>
+    <string name="policy_section_body">用于控制 SysBlackApp 场景命中的策略上限；属开发者向，部分字段需开启高级编辑。</string>
+    <string name="policy_template_title">场景模板：%1$s（scene=%2$s）</string>
+    <string name="policy_mask_title">限制掩码：%1$s</string>
+    <string name="policy_technical_detail">group=%1$s</string>
+
+    <string name="module_detail_fast_freeze_skip_desc">编辑 ffPkg type=black，语义为 skip fastfreeze（跳过快冻）。</string>
+    <string name="module_detail_whitelist_donot_desc">编辑 DoNotFreeze 豁免名单。</string>
+    <string name="module_detail_whitelist_white100_desc">编辑 whitePkg category=100（第三方白名单）。</string>
+    <string name="module_detail_whitelist_im_desc">编辑 IM 特判（imPkg）。</string>
+    <string name="module_detail_whitelist_cpuctl_desc">编辑 CPUCtl 白名单（cpuCtlWhiteList）。</string>
+    <string name="module_detail_whitelist_appcard_desc">编辑 AppCard 忽略列表（appCard.ignoreApp）。</string>
+    <string name="module_detail_whitelist_keepalive_desc">快捷保活（优待）操作。</string>
+    <string name="module_detail_sys_black_quick_desc">打开秒冻（压制）快捷操作。</string>
+    <string name="module_detail_sys_black_lcdon_desc">编辑场景名单 lcdon。</string>
+    <string name="module_detail_sys_black_lcdoff_desc">编辑场景名单 lcdoff。</string>
+    <string name="module_detail_sys_black_night_desc">编辑场景名单 night。</string>
+    <string name="module_detail_sys_black_policy_desc">查看 SysBlackPolicy/RestrictMask 高级参数。</string>
+    <string name="module_detail_proxy_global_desc">查看并编辑 proxyConfig 全局参数（高级门禁）。</string>
+    <string name="module_detail_proxy_default_bc_desc">查看并编辑 defaultProxyBc 广播动作（高级门禁）。</string>
+    <string name="module_detail_proxy_bundle_desc">查看 proxySensor/proxyGps/proxyBtScan/proxyBinder 等能力（高级门禁）。</string>
+    <string name="module_detail_bump_service_desc">编辑 serviceBumpUnFzReasonList（高风险）。</string>
+    <string name="module_detail_bump_prevent_desc">编辑 prevent 场景规则（高风险）。</string>
+    <string name="module_detail_bump_allow_title">allow 场景规则</string>
+    <string name="module_detail_bump_allow_desc">编辑 allow 场景规则（高风险）。</string>
+    <string name="module_detail_bump_traffic_desc">trafficConfig 暂无独立编辑器，请前往高级区。</string>
+    <string name="module_detail_high_load_loading_desc">编辑 high-loading 高负载检测（高风险）。</string>
+    <string name="module_detail_high_load_cpuctl_desc">编辑 cpuCtlRus（高风险）。</string>
+    <string name="module_detail_high_load_android_freeze_desc">编辑 android-freeze 联动（高风险）。</string>
+    <string name="module_detail_high_load_quota_desc">编辑 appQuotaConfig（高风险）。</string>
+    <string name="module_detail_high_load_strict_desc">仅编辑 strictMode enable 开关，不修改 level。</string>
+
+
+    <string name="list_editor_import_clipboard">从剪贴板导入</string>
+    <string name="list_editor_sort">排序</string>
+    <string name="list_editor_clear">清空</string>
+    <string name="staged_ok_count">已暂存：%1$d 条</string>
+    <string name="list_editor_save">确认暂存</string>
+    <string name="list_editor_edit_item">编辑条目</string>
+    <string name="list_editor_delete_item">删除条目</string>
+    <string name="list_editor_clipboard_empty">剪贴板为空</string>
+    <string name="list_editor_desc_service_bump">每行一个原因（如 bind/create/start），可自定义</string>
+    <string name="list_editor_desc_plain_tokens">每行一个 token；支持粘贴多行；会去重</string>
+    <string name="list_editor_desc_key_value_with_sample">必须形如 key=value（示例：%1$s）</string>
+    <string name="list_editor_desc_csv_rule_with_sample">必须形如 scene,pkg,mask,version,code（pkg 必填）。示例：%1$s</string>
+    <string name="list_editor_invalid_lines_count">存在 %1$d 行无效输入</string>
+    <string name="list_editor_invalid_key_value_missing_equal">第%1$d行缺少 =：%2$s</string>
+    <string name="list_editor_invalid_key_value_empty_key">第%1$d行 key 为空：%2$s</string>
+    <string name="list_editor_invalid_csv_too_few_columns">第%1$d行 CSV 列数不足（至少2列）：%2$s</string>
+    <string name="list_editor_invalid_csv_pkg_required">第%1$d行 pkg 不能为空：%2$s</string>
+    <string name="list_editor_desc_android_freeze_mixed_format">本页支持两种格式：
+开关：key=value（仅支持 enable/whiteEnable/killWhiteEnable/sysAppExemptEnable，true/false）
+豁免配额：pkg[,bgMode]（例如 com.oplus.camera,256）</string>
+    <string name="list_editor_invalid_android_freeze_unknown_key">第%1$d行：未知开关键（%2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_boolean">第%1$d行：开关值必须为 true/false（当前：%2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_quota_columns">第%1$d行：豁免配额格式错误（仅支持 pkg 或 pkg,bgMode）：%2$s</string>
+    <string name="list_editor_invalid_android_freeze_invalid_pkg">第%1$d行：豁免配额行 pkg 非法（当前：%2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_bgmode">第%1$d行：豁免配额行 bgMode 必须为数字（当前：%2$s）</string>
+    <string name="edit_invalid_all_ignored">输入均无效，已忽略并保留原暂存配置</string>
+    <string name="list_editor_import_result">已导入 %1$d 条</string>
+    <string name="cleanup_system_state_title">清理系统级持久化配置</string>
+    <string name="cleanup_system_state_message">将清理 persist.opch.* 系统属性及 /data/local/tmp/oplusconfighook 残留文件。
+需要 Root 权限。
+
+清理后不会删除 App 内设置；如需重新生效请手动重新应用策略或重启。</string>
+    <string name="cleanup_system_state_continue">继续清理</string>
+    <string name="cleanup_system_state_running">清理中…</string>
+    <string name="cleanup_system_state_button">清理系统级持久化配置（需 Root）</string>
+    <string name="cleanup_system_state_hint">用于卸载/重装后清理 persist 属性与外置配置残留。不删除 App 内设置。</string>
+    <string name="cleanup_system_state_result">清理完成：%1$d/%2$d（系统属性+外置文件）。如需重新生效，请手动重新应用策略或重启。</string>
+    <string name="editor_render_failed_reopen">编辑器渲染失败，请重开</string>
+    <string name="editor_submit_host_not_found">无法提交：未找到宿主（Host）</string>
+    <string name="proxy_config_enable">config.enable</string>
+    <string name="proxy_sensor_proxy_pkg_hint">proxyPkg（每行一个包名，提交时以 | 合并）</string>
+    <string name="proxy_sensor_proxy_type_hint">proxyType（每行一个 typeName）</string>
+    <string name="proxy_sensor_white_type_pkg_hint">whiteTypePkg（每行 type=pkg1|pkg2）</string>
+    <string name="proxy_sensor_invalid_proxy_pkg">proxyPkg 存在非法包名: %1$s</string>
+    <string name="proxy_sensor_invalid_white_type_pkg">whiteTypePkg 包名非法: %1$s</string>
+    <string name="proxy_binder_invalid_pkg">descConfig 包名非法: %1$s</string>
+    <string name="scene_token_lcdon">lcdon</string>
+    <string name="scene_token_lcdoff">lcdoff</string>
+    <string name="scene_token_night">night</string>
+    <string name="about_section_title">关于</string>
+    <string name="about_version_label">版本：</string>
+    <string name="about_author_label">作者：</string>
+    <string name="author_name">Astor</string>
+    <string name="editor_spec_self_check_warning">开发者自检：当前配置与校验不一致，详见日志。</string>
+    <string name="hook_config_source_value">Hook 配置来源：%1$s</string>
+    <string name="hook_master_resolved_value">主开关：%1$s（来源=%2$s）</string>
+    <string name="hook_autostart_resolved_value">自启动：%1$s（来源=%2$s）</string>
+    <string name="hook_tombstone_resolved_value">墓碑：%1$s（来源=%2$s）</string>
+    <string name="hook_user_fact_value">是否存在用户配置事实：%1$s（%2$s）</string>
+    <string name="proxy_binder_desc_help">每行：desc=pkg1|pkg2（pkg 支持 * 通配符；内部存储分隔符为 #）</string>
+    <string name="settings_diag_group">诊断（只读）</string>
+    <string name="settings_experiments_group">实验功能（分批放量）</string>
+    <string name="allow_pm_readconfig_observe">手机管家：仅观察 readConfig</string>
+    <string name="allow_pm_readconfig_modify">手机管家：允许替换 readConfig（实验）</string>
+    <string name="allow_pm_fs_hook">手机管家：允许 FS Hook（高风险）</string>
+    <string name="allow_sc_readconfig_observe">安全中心：仅观察 readConfig</string>
+    <string name="allow_sc_readconfig_modify">安全中心：允许替换 readConfig（实验）</string>
+    <string name="allow_sc_fs_hook">安全中心：允许 FS Hook（高风险）</string>
+    <string name="proxy_occurrence_suffix">（occurrences=%1$d，预计更新=%2$d）</string>
+    <string name="proxy_sensor_summary">enable=%1$s，proxyType=%2$s，proxyPkg=%3$s，typeCount=%4$d，whiteRules=%5$d%6$s</string>
+    <string name="proxy_binder_summary">enable=%1$s，descRules=%2$d%3$s</string>
+</resources>

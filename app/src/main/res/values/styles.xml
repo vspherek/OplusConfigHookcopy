@@ -1,0 +1,37 @@
+<resources>
+    <style name="Widget.OplusConfigHook.SectionCard" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">?attr/colorSurfaceContainerLow</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.OplusConfigHook.Medium</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.OplusConfigHook.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="TextAppearance.OplusConfigHook.PageTitle" parent="TextAppearance.Material3.TitleLarge" />
+
+    <style name="TextAppearance.OplusConfigHook.SectionTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance.OplusConfigHook.SectionBody" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="Widget.OplusConfigHook.Button.FullWidth" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+    </style>
+
+    <style name="Widget.OplusConfigHook.Button.OutlinedFullWidth" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+    </style>
+
+    <style name="Widget.OplusConfigHook.Button.TextFullWidth" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">@dimen/min_touch_target</item>
+    </style>
+</resources>

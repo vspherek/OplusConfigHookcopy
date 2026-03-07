@@ -1,0 +1,538 @@
+<resources>
+    <string name="app_name">OplusConfigHook</string>
+    <string name="tab_tombstone">バックグラウンド凍結</string>
+    <string name="tab_autostart">自動起動管理</string>
+    <string name="tab_settings">設定</string>
+
+    <string name="image_placeholder">プレースホルダー画像</string>
+    <string name="free_notice_title">これは無料のオープンソースソフトです</string>
+    <string name="free_notice_message">この奇跡と魔法は無料です。もしお金を払ったなら、だまされています！</string>
+    <string name="open_project_homepage">プロジェクトページ</string>
+    <string name="project_homepage_url">https://github.com/astor/OplusConfigHook</string>
+
+    <string name="enable_replacement">置き換えを有効化</string>
+    <string name="enable_autostart_replacement">自動起動置き換えを有効化</string>
+    <string name="enable_tombstone_replacement">バックグラウンド凍結ポリシー置き換えを有効化</string>
+    <string name="allow_android_fs_hook">Android プロセスで FS Hook を許可（高リスク）</string>
+    <string name="debug_force_master">デバッグ: master=true を強制（一時）</string>
+    <string name="log_stack">スタックトレースを記録</string>
+    <string name="log_only_matches">一致したキーのみ記録</string>
+
+    <string name="autostart_policy_desc">自動起動ホワイトリストを編集します（txt は1行1パッケージ）。</string>
+    <string name="tombstone_policy_desc">バックグラウンド凍結ポリシー一覧とシナリオ別ブラックリストを安全に編集します。</string>
+    <string name="current_source_value">現在のソース: %1$s</string>
+    <string name="source_user">ユーザーポリシー</string>
+    <string name="source_asset">内蔵デフォルト</string>
+
+    <string name="import_txt">txtをインポート</string>
+    <string name="import_xml">xmlをインポート</string>
+    <string name="export_policy">エクスポート</string>
+    <string name="apply_policy">ポリシーを適用</string>
+    <string name="restore_default">デフォルトに戻す</string>
+    <string name="edit_by_checked_apps">選択したアプリで編集</string>
+    <string name="staged_not_applied">一時保存のみです。まだ適用されていません。</string>
+
+    <string name="import_failed">インポート失敗</string>
+    <string name="import_failed_reason">インポート失敗: %1$s</string>
+    <string name="export_failed_reason">操作失敗: %1$s</string>
+    <string name="export_success">エクスポート完了</string>
+    <string name="autostart_invalid">自動起動ファイルが空、またはコメントのみです。</string>
+    <string name="policy_applied">Policy applied and cache refreshed.</string>
+
+    <string name="scene_params_readonly">シーンパラメータ（読み取り専用、一般ユーザー向けではありません）</string>
+    <string name="scene_blacklist_title">シーン別で凍結対象に追加</string>
+    <string name="scene_count_value">%1$d アプリ</string>
+    <string name="global_whitelist_title">グローバル優待と免除</string>
+    <string name="freeze_allow_friendly">起動フリーズ連鎖ホワイトリスト（上級）
+特定の起動/フリーズ連鎖ルールのみに影響し、全体的な非凍結や常駐保活と同義ではありません。</string>
+    <string name="donot_freeze_friendly">凍結しない（dex2oat凍結チェーンのみ対象。全体の常駐保証ではありません）。バックグラウンド常駐しやすく、凍結されません。慎重に使用してください。</string>
+    <string name="more">詳細</string>
+    <string name="edit">Edit</string>
+
+    <string name="search_apps_hint">アプリ名またはパッケージ名で検索</string>
+    <string name="system_app">システムアプリ</string>
+    <string name="add">追加</string>
+    <string name="confirm_stage">確認</string>
+    <string name="cancel">キャンセル</string>
+
+    <string name="donation_entry">寄付サポート</string>
+    <string name="donation_qr_title">寄付QRコード</string>
+    <string name="wallet_address_label">ウォレットアドレス</string>
+    <string name="wallet_eth_address">0x1234567890ABCDEF1234567890ABCDEF12345678</string>
+    <string name="copy">コピー</string>
+    <string name="share">共有</string>
+    <string name="wallet_copy_success">アドレスをコピーしました</string>
+    <string name="wallet_share_text">プロジェクトを応援: %1$s</string>
+    <string name="wallet_share_chooser">ウォレットアドレスを共有</string>
+    <string name="donation_security_notice">フィッシング防止のため、アドレスの出所を確認してください。</string>
+
+    <string name="scene_params_editable">シナリオ参数（リスクあり。設定で高度編集を有効化）</string>
+    <string name="reset_scene">デフォルトに戻す</string>
+    <string name="modified_not_applied">変更済みですが未適用です</string>
+    <string name="filter">フィルター</string>
+    <string name="sort">並び替え</string>
+    <string name="filter_all_apps">すべて表示</string>
+    <string name="filter_user_apps">ユーザーアプリのみ</string>
+    <string name="filter_system_apps">システムアプリのみ</string>
+    <string name="filter_state_value">フィルター: %1$s</string>
+    <string name="sort_by_label">アプリ名で並び替え</string>
+    <string name="sort_by_package">パッケージ名で並び替え</string>
+    <string name="sort_by_install_time">インストール日時で並び替え</string>
+    <string name="sort_by_update_time">更新日時で並び替え</string>
+    <string name="sort_descending">降順</string>
+    <string name="tombstone_param_scene_title">scene の説明</string>
+    <string name="tombstone_param_scene_body">scene は画面オン・画面オフ・夜間・充電などのシステム状態を識別する値です。
+通常はシステムによって設定されるため、理解していない場合は変更しないでください。
+
+誤った値はポリシーの異常動作を引き起こす可能性があります。</string>
+    <string name="tombstone_param_mask_title">mask の説明</string>
+    <string name="tombstone_param_mask_body">mask はどのポリシールールを有効化するかを制御するビットマスクです。
+ROM によって意味が異なる場合があります。
+
+特に理由がない限り、既定値を維持することを推奨します。</string>
+    <string name="tombstone_param_quota_title">quota の説明</string>
+    <string name="tombstone_param_quota_body">quota はバックグラウンド制御のしきい値や頻度に影響する可能性があります。
+
+値が大きいほど制限が緩くなり、
+小さいほど制限が強くなる可能性があります。</string>
+    <string name="tombstone_param_bgmode_title">bgMode の説明</string>
+    <string name="tombstone_param_bgmode_body">bgMode はシステム内部のバックグラウンドポリシーモードを示します。
+具体的な意味は ROM 実装に依存します。
+
+変更すると動作やバッテリー消費に影響する可能性があります。</string>
+    <string name="tombstone_param_fgsexempt_title">fgsExempt の説明</string>
+    <string name="tombstone_param_fgsexempt_body">fgsExempt はフォアグラウンドサービスの例外設定を制御します。
+
+有効にするとバックグラウンド維持が改善される場合がありますが、
+バッテリー消費が増える可能性もあります。</string>
+    <string name="tombstone_param_risk_notice">⚠ これらの値を変更すると異常動作や電池消費増加の可能性があります。自己責任で行ってください。</string>
+    <string name="tombstone_param_dialog_ok">OK</string>
+
+    <string name="advanced_policy_edit">高度編集（高リスク）</string>
+    <string name="policy_group_sys_black_policy">ポリシーパラメータ (SysBlackPolicy)</string>
+    <string name="policy_group_sys_black_restrict">制限マスク (SysBlackRestrictMask)</string>
+    <string name="app_picker_loading_apps">アプリ一覧を読み込み中…</string>
+    <string name="app_picker_load_failed">アプリ一覧の読み込みに失敗しました。</string>
+    <string name="filter_checked_all">すべて</string>
+    <string name="filter_checked_only">チェック済み</string>
+    <string name="filter_unchecked_only">未チェック</string>
+    <string name="enable_advanced_editing_hint">この項目を編集するには、設定で高度編集を有効にしてください。</string>
+    <string name="tombstone_freeze_help">このページはバックグラウンド凍結ポリシーを制御します。変更により通知・バックグラウンド処理・電池消費へ影響する可能性があります。自己責任で操作してください。</string>
+    <string name="scene_info_lcdon_title">lcdon</string>
+    <string name="scene_info_lcdon_body">名前と一般的な電源管理の意味からの推定です。lcdon の参数は画面オン時に適用される可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_lcdoff_title">lcdoff</string>
+    <string name="scene_info_lcdoff_body">名前と一般的な電源管理の意味からの推定です。lcdoff の参数は画面オフ時に適用される可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_night_title">night</string>
+    <string name="scene_info_night_body">名前と一般的な電源管理の意味からの推定です。night の参数は夜間/睡眠時間帯に関連する可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_charging_title">charging</string>
+    <string name="scene_info_charging_body">名前と一般的な電源管理の意味からの推定です。charging の参数は充電中に適用される可能性があります。メーカー実装により厳しさは異なる可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_extremefg_title">extremeFg</string>
+    <string name="scene_info_extremefg_body">名前と一般的な電源管理の意味からの推定です。extremeFg は前面で活発なアプリ群に関する区分の可能性があります。厳しめ/緩めのどちらにもなり得ます。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_fastfreeze_title">fastFreeze</string>
+    <string name="scene_info_fastfreeze_body">名前と一般的な電源管理の意味からの推定です。fastFreeze は待機時間を短くし、より速く凍結へ移る可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="scene_info_minsystem_title">minSystem</string>
+    <string name="scene_info_minsystem_body">名前と一般的な電源管理の意味からの推定です。minSystem は重要なシステムコンポーネントの誤凍結を防ぐ下限に関する可能性があります。具体的な動作はシステム実装に依存します。</string>
+    <string name="tombstone_title">バックグラウンド凍結</string>
+    <string name="reset_default">デフォルトに戻す</string>
+    <string name="advanced_editing">高度編集</string>
+    <string name="advanced_editing_desc">生の数値を編集できます。誤った変更は通知やバックグラウンド動作に影響する可能性があります。</string>
+    <string name="advanced_editing_required">変更するには設定で「高度編集」を有効にしてください。</string>
+    <string name="unit_ms">ms</string>
+    <string name="unit_s">秒</string>
+    <string name="unit_raw">生値</string>
+    <string name="approx_prefix">約</string>
+    <string name="unit_example_hint">換算例（参考）</string>
+    <string name="unit_unknown_hint">この項目の単位は不明確です。実際の解釈はシステム実装に依存します。</string>
+    <string name="scenario_params_risky">シナリオパラメータ（リスクあり。設定で高度編集を有効化）</string>
+    <string name="hint_inference_disclaimer">本説明はフィールド名と一般的な省電力挙動からの推測です。実際の挙動はROM実装に依存します。</string>
+    <string name="hint_lcdon">画面点灯時に適用。凍結前の遅延やチェック周期に影響することがあります。</string>
+    <string name="hint_lcdoff">画面消灯時に適用。より積極的に凍結する可能性があります。</string>
+    <string name="hint_night">夜間/就寝時間帯に適用。スケジュール省電力と関連する場合があります。</string>
+    <string name="hint_charging">充電中に適用。凍結の強さが変わる可能性があります。</string>
+    <string name="hint_extremefg">強い前景条件/グループ。前景/アクティブアプリの扱いが変わる可能性があります。</string>
+    <string name="hint_fastfreeze">高速凍結パス。凍結までの待ち時間が短くなる可能性があります。</string>
+    <string name="hint_minsystem">システム最小保護/ホワイトリスト閾値。重要なシステム要素の誤凍結を防ぐ可能性があります。</string>
+    <string name="unit_example_both">msとして解釈: %1$s ≈ %2$s 秒。秒として解釈: %1$s ≈ %3$s 時間。</string>
+    <string name="invalid_number_value">数値形式が無効です：%1$s</string>
+    <string name="large_value_risk_hint">大きな値が検出されました。単位と挙動リスクを確認してください。</string>
+    <string name="field_lcdOff_ffInterval">lcdOffConfig.ffInterval</string>
+    <string name="field_tip_lcdOff_ffInterval">Fast-freeze interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_interval">lcdOffConfig.interval</string>
+    <string name="field_tip_lcdOff_interval">Regular interval in lcdOffConfig.</string>
+    <string name="field_lcdOff_ffTotal">lcdOffConfig.ffTotal</string>
+    <string name="field_tip_lcdOff_ffTotal">Total FF count (not a time field).</string>
+    <string name="field_lcdOn_RToM">lcdOnConfig.RToM</string>
+    <string name="field_tip_lcdOn_RToM">RToM transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_MToF">lcdOnConfig.MToF</string>
+    <string name="field_tip_lcdOn_MToF">MToF transition under lcdOnConfig.</string>
+    <string name="field_lcdOn_checkImportance">lcdOnConfig.checkImportance</string>
+    <string name="field_tip_lcdOn_checkImportance">Importance check interval in lcdOnConfig.</string>
+    <string name="field_ff_enterTimeout">ffConfig.enterTimeout</string>
+    <string name="field_tip_ff_enterTimeout">Fast-freeze enter timeout.</string>
+    <string name="field_ff_interval">ffConfig.interval</string>
+    <string name="field_tip_ff_interval">Fast-freeze interval.</string>
+    <string name="field_ff_maxFzNum">ffConfig.maxFzNum</string>
+    <string name="field_tip_ff_maxFzNum">Maximum freeze count (not a time field).</string>
+    <string name="field_powerSave_repeatTime">powerSaveConfig.repeatTime</string>
+    <string name="field_tip_powerSave_repeatTime">Power save repeat time.</string>
+    <string name="field_traffic_interval">trafficConfig.interval</string>
+    <string name="field_tip_traffic_interval">Traffic check interval.</string>
+    <string name="field_traffic_unfreeze">trafficConfig.trafficUnfreezeTime</string>
+    <string name="field_tip_traffic_unfreeze">Unfreeze duration for traffic condition.</string>
+    <string name="field_api_upper">ApiTimeoutConfig.upperTimeout</string>
+    <string name="field_tip_api_upper">Upper API timeout.</string>
+    <string name="field_api_floor">ApiTimeoutConfig.floorTimeout</string>
+    <string name="field_tip_api_floor">Lower API timeout.</string>
+    <string name="field_query_interval">queryUsageStatsConfig.queryIntervalTime</string>
+    <string name="field_tip_query_interval">Usage stats query interval.</string>
+    <string name="field_query_messageDelay">queryUsageStatsConfig.messageDelayTime</string>
+    <string name="field_tip_query_messageDelay">Message delay time.</string>
+    <string name="field_query_repeatCount">queryUsageStatsConfig.messageRepeateCount</string>
+    <string name="field_tip_query_repeatCount">Message repeat count (not a time field).</string>
+    <string name="field_forceProxy_gpsInterval">screenOffStillForceProxyConfig.gpsInterval</string>
+    <string name="field_tip_forceProxy_gpsInterval">GPS interval for screen-off still force-proxy config.</string>
+    <string name="field_forceProxy_defaultInterval">screenOffStillForceProxyConfig.defaultInterval</string>
+    <string name="field_tip_forceProxy_defaultInterval">Default interval for screen-off still force-proxy config.</string>
+    <string name="field_freeze_guardTime">freezeInterval.guardTime</string>
+    <string name="field_tip_freeze_guardTime">Guard time in freezeInterval.</string>
+    <string name="field_freeze_RToM">freezeInterval.RToM</string>
+    <string name="field_tip_freeze_RToM">RToM transition in freezeInterval.</string>
+    <string name="field_freeze_RToMST">freezeInterval.RToMST</string>
+    <string name="field_tip_freeze_RToMST">RToMST transition in freezeInterval.</string>
+    <string name="field_freeze_MToF">freezeInterval.MToF</string>
+    <string name="field_tip_freeze_MToF">MToF transition in freezeInterval.</string>
+    <string name="field_freeze_MToFST">freezeInterval.MToFST</string>
+    <string name="field_tip_freeze_MToFST">MToFST transition in freezeInterval.</string>
+    <string name="field_freeze_checkImportance">freezeInterval.checkImportance</string>
+    <string name="field_tip_freeze_checkImportance">Importance check interval in freezeInterval.</string>
+    <string name="app_picker_invalid_launch_fallback">起動パラメータが不正なため、空の選択にフォールバックしました。</string>
+    <string name="app_picker_open_failed">アプリ一覧エディタを開けませんでした。</string>
+    <string name="export_logs">ログをエクスポート</string>
+    <string name="copy_last_crash">最新クラッシュスタックをコピー</string>
+    <string name="export_logs_success">ログをエクスポートしました</string>
+    <string name="no_crash_log">クラッシュログがありません</string>
+    <string name="copy_crash_success">クラッシュスタックをコピーしました</string>
+    <string name="tombstone_inspector">アプリを検査</string>
+    <string name="tombstone_inspector_hint">パッケージ名を入力し、凍結系・特別処理ルールでのヒットを確認します。</string>
+    <string name="special_handling">特別処理</string>
+    <string name="special_im_pkg_title">IM 特例（imPkg）</string>
+    <string name="special_cpu_ctl_title">CPU 制御ホワイトリスト（cpuCtlWhiteList）</string>
+    <string name="special_app_card_title">AppCard 無視リスト（appCard.ignoreApp）</string>
+    <string name="special_pkg_config_title">機能セット（pkgConfig、既定は読み取り専用）</string>
+    <string name="special_cpn_title">コンポーネント/Binder ルール（cpnAsyncBinder）</string>
+    <string name="special_im_pkg_explain">IM 特例: メッセージング系として扱われ、通知/常駐/凍結で優遇される可能性があります。</string>
+    <string name="special_cpu_ctl_explain">CPU 制御除外: CPU 制限ポリシーで干渉されにくくなります。</string>
+    <string name="special_app_card_explain">AppCard 無視: バックグラウンド管理で回収/凍結されにくくなる可能性があります。</string>
+    <string name="high_risk_readonly">高リスク: 既定は読み取り専用。誤編集でシステム通信に影響する可能性があります。</string>
+    <string name="not_configured">未設定</string>
+    <string name="inspector_result_summary">安全に編集可能: %1$d
+注意: %2$d
+高リスク: %3$d</string>
+    <string name="advanced_editing_confirm">開発者向け編集を有効にすると ROM 動作に影響する可能性があります。続行しますか？</string>
+    <string name="quick_actions">クイック操作</string>
+    <string name="quick_suppress">今すぐ抑制</string>
+    <string name="quick_keep_alive">常駐維持</string>
+    <string name="quick_actions_hint">この操作は一時保存のみです。反映するには「ポリシーを適用」をタップしてください。</string>
+    <string name="freeze_timing">凍結タイミング(Freeze timing)</string>
+    <string name="freeze_timing_explain">単位: ミリ秒 (ms)。これらの閾値は実行→遷移→凍結タイミングを制御します。</string>
+    <string name="field_freeze_guard_title">Pre-freeze guard time (guardTime)</string>
+    <string name="field_freeze_rtom_title">Run to middle threshold (RToM)</string>
+    <string name="field_freeze_rtomst_title">Run to middle strict threshold (RToMST)</string>
+    <string name="field_freeze_mtof_title">Middle to freeze threshold (MToF)</string>
+    <string name="field_freeze_mtofst_title">Middle to freeze strict threshold (MToFST)</string>
+    <string name="field_freeze_check_title">Importance check interval (checkImportance)</string>
+    <string name="inspector_pkg_label">選択したアプリ</string>
+    <string name="inspector_pkg_helper">Example: com.tencent.mm</string>
+    <string name="select_app">Select app</string>
+    <string name="inspector_only_editable">Only show editable items</string>
+    <string name="inspector_group_mainline">Main freeze chain</string>
+    <string name="inspector_group_special">Special handling &amp; exemptions</string>
+    <string name="inspector_group_feature">Feature set (pkgConfig)</string>
+    <string name="inspector_group_binder">Component/Binder rules</string>
+    <string name="special_pkg_config_explain">Feature set: category is a bitmask-style switch set. Editing package tokens changes system behavior.</string>
+    <string name="special_cpn_explain">Component/Binder rules affect system communication interfaces. Wrong edits may break system features.</string>
+    <string name="inspector_mainline_explain">This is in the freeze main chain and may directly affect freeze behavior.</string>
+    <string name="risk_confirm_required">Developer mode required + risk confirmation before editing.</string>
+    <string name="quick_preview_suppress">Staged: removed favorable lists and applied suppress timing profile.</string>
+    <string name="quick_preview_keep_alive">Staged: added keep-alive list entries for selected packages.</string>
+    <string name="remove">Remove</string>
+    <string name="restore">復元</string>
+    <string name="inspector_empty_hint">アプリを選択して命中結果を表示</string>
+    <string name="freeze_timing_hint_once">値の単位はミリ秒（ms）です。</string>
+    <string name="why_affect_my_app">なぜこの設定がアプリに影響するの？</string>
+    <string name="why_affect_my_app_body">appType=4 は appTypeConfig で net に対応しますが、アプリ分類は ROM が実行時に判定します。freezeInterval に対する明示的なパッケージ一覧は XML にありません。パッケージ単位の制御は Inspector と包名ルールを使用してください。</string>
+    <string name="mode_high_extreme">高強度モード (highExtremeMode)</string>
+    <string name="mode_extreme">極限モード (extremeMode)</string>
+    <string name="mode_high_perf">高性能モード (highPerfMode)</string>
+    <string name="mode_high_load_l3">高負荷モード (highLoadMode, level=3)</string>
+    <string name="mode_high_load_l1">高負荷モード (highLoadMode, level=1)</string>
+    <string name="app_type_general">汎用アプリ (appType=1000)</string>
+    <string name="app_type_net">ネットワーク関連 (appType=4)</string>
+    <string name="app_type_net_combo">ネットワーク/組み合わせ (appType=4#7)</string>
+    <string name="advanced_fields">高度フィールド</string>
+    <string name="freeze_timing_explain_no_unit">これらの閾値は実行→遷移→凍結のタイミングを制御します。</string>
+    <string name="inspector_placeholder_pick_app">アプリを選択してください</string>
+    <string name="why_affect_key_points">要点</string>
+    <string name="why_affect_point_1">• appType=4 は appTypeConfig で net に対応します。</string>
+    <string name="why_affect_point_2">• アプリ分類は ROM が実行時に判定します。</string>
+    <string name="why_affect_point_3">• XML には freezeInterval → パッケージ名の明示マッピングがありません。</string>
+    <string name="why_affect_jump">移動</string>
+    <string name="why_affect_open_inspector">「アプリを検査」を開く</string>
+    <string name="why_affect_open_package_rules">「パッケージ単位のルール/一覧」を開く（SysBlackApp/sysBlack/allow/donot-freeze/例外）</string>
+    <string name="scene_blacklist_explain">追加後、そのシーンでアプリにバックグラウンド凍結/制限が適用されやすくなります。</string>
+    <string name="global_whitelist_explain">弱い優待と強い免除を使い分け、体感と電力消費のバランスを取ってください。</string>
+    <string name="scene_lcdon">画面オン（lcdon）</string>
+    <string name="scene_lcdoff">画面オフ（lcdoff）</string>
+    <string name="scene_night">夜間（night）</string>
+    <string name="edit_section_list">編集</string>
+    <string name="back_to_top">先頭へ戻る</string>
+    <string name="autostart_actions_title">ポリシー操作</string>
+    <string name="settings_basic_group">機能スイッチ</string>
+    <string name="settings_tools_group">ツールとサポート</string>
+    <string name="tombstone_actions_title">ポリシー操作と適用</string>
+    <string name="ms_only_hint">単位: ms（ミリ秒）。</string>
+    <string name="quick_keep_alive_notice">保活は次を試みます：SysBlackApp各シーンから除外、対応時はffPkg.black/whitePkg.category=100へ追加、さらに選択した他リストへ追加。変更は「ポリシーを適用」まで一時保存です。</string>
+    <string name="quick_suppress_notice">このショートカットは次の値へ同期します: guardTime=0, RToM=0, RToMST=0, MToF=0, MToFST=0。checkImportance は変更しません。</string>
+    <string name="quick_target_donot_freeze">donot_freeze_app_list（凍結しない）</string>
+    <string name="quick_target_freeze_allow">freeze_allow_list（起動フリーズ連鎖ホワイトリスト）</string>
+    <string name="ff_skip_title">高速凍結スキップ一覧（ffPkg.black）</string>
+    <string name="ff_skip_explain">追加すると fast freezer の高速凍結対象から外れます。保活寄りですが、電力消費が増える可能性があります。</string>
+    <string name="white_third_title">サードパーティ白リスト（whitePkg.category=100）</string>
+    <string name="white_third_explain">追加するとシステムが凍結/代理制限を緩和しやすくなります。保活寄りですが、電力消費が増える可能性があります。</string>
+    <string name="tab_advanced">詳細</string>
+    <string name="tab_recommended">おすすめ</string>
+    <string name="tombstone_dirty_badge">• 未適用の変更</string>
+    <string name="tombstone_io_apply">ポリシー適用とインポート/エクスポート</string>
+
+    <string name="special_enable_config_title">グローバルスイッチ（enableConfig）</string>
+    <string name="special_enable_config_explain">enableConfig の hans/gms など全体スイッチです。グローバル動作に影響します。</string>
+    <string name="special_gms_title">GMS リスト（gms）</string>
+    <string name="special_gms_explain">ROM が参照する GMS パッケージ一覧です。</string>
+    <string name="special_ff_skip_title">高速凍結スキップ一覧（ffPkg.black）</string>
+    <string name="special_ff_skip_explain">選択アプリを fastfreeze 対象から外します。</string>
+    <string name="special_white_100_title">重要白リスト（whitePkg.100）</string>
+    <string name="special_white_100_explain">カテゴリ 100 の重要白リスト。</string>
+    <string name="special_white_010_title">システム/OPlus 白リスト（whitePkg.010）</string>
+    <string name="special_white_010_explain">カテゴリ 010 のシステム寄り白リスト。</string>
+    <string name="special_white_001_title">サードパーティ白リスト（whitePkg.001）</string>
+    <string name="special_white_001_explain">カテゴリ 001 のサードパーティ白リスト。</string>
+    <string name="special_black_hans_title">blackHansPkg リスト</string>
+    <string name="special_black_hans_explain">blackHansPkg の enable と pkg トークンを編集します。</string>
+    <string name="quick_target_ff_skip">高速凍結をスキップ（ffPkg.black）</string>
+    <string name="quick_target_white_100">重要白リスト（whitePkg.100）</string>
+    <string name="proxy_section_title">プロキシ / バッチ</string>
+    <string name="proxy_global_title">プロキシ全体設定 (proxyConfig)</string>
+    <string name="proxy_default_bc_title">既定のプロキシブロードキャスト動作</string>
+    <string name="proxy_default_bc_explain">defaultProxyBc のアクション一覧を編集します（全出現箇所）。</string>
+    <string name="proxy_sensor_type_title">プロキシセンサーの type 名</string>
+    <string name="proxy_sensor_type_explain">proxySensor / proxyType の一覧を編集します。</string>
+    <string name="proxy_gps_title">GPS プロキシ</string>
+    <string name="proxy_gps_explain">proxyGps の設定と item のパッケージ一致ルールを編集します。</string>
+    <string name="proxy_bt_scan_title">Bluetooth スキャン プロキシ</string>
+    <string name="proxy_bt_scan_explain">proxyBtScan の動作を有効化または無効化します。</string>
+    <string name="proxy_binder_title">Binder プロキシ</string>
+    <string name="proxy_binder_explain">proxyBinder の descConfig におけるパッケージ一致ルールを編集します。</string>
+    <string name="v3c_service_bump_title">Service bump unfreeze reasons</string>
+    <string name="v3c_prevent_title">Hard prevent rules (prevent)</string>
+    <string name="v3c_allow_title">Hard allow rules (allow)</string>
+    <string name="v3c_android_freeze_title">Android freeze linkage</string>
+    <string name="v3c_app_quota_title">App quota continuous task config</string>
+    <string name="v3c_high_loading_title">High-loading config</string>
+    <string name="v3c_cpu_ctl_rus_title">CPU control RUS config</string>
+    <string name="proxy_sensor_title">センサー プロキシ</string>
+    <string name="proxy_sensor_explain">proxySensor の whiteTypePkg パッケージ規則を編集します。</string>
+    <string name="quick_suppress_notice_v3">デフォルト: 優待/除外リストを解除し、選択したアプリをシーン凍結対象（lcdon/lcdoff/night）に追加します。
+
+「高度な編集」有効時のみ「凍結タイミングパラメータを 0 に同期（全体・高リスク）」を追加で選択できます。L1/L2/L3 は freezeInterval 内の既存フィールドのみを 0 にし、新規フィールドは追加せず、checkImportance も変更しません。</string>
+    <string name="quick_suppress_timing_enable">凍結タイミングパラメータを 0 に同期（全体・高リスク）</string>
+    <string name="quick_suppress_timing_help_l1">L1: freezeInterval{highExtremeMode:*:1000} の guardTime/RToM/RToMST/MToF/MToFST を 0 に設定（既存フィールドのみ）。checkImportance は変更しません。</string>
+    <string name="quick_suppress_timing_help_l2">L2: freezeInterval{highExtremeMode|extremeMode|highPerfMode|highLoadMode:*:1000} の guardTime/RToM/RToMST/MToF/MToFST を 0 に設定（既存フィールドのみ）。checkImportance は変更しません。</string>
+    <string name="quick_suppress_timing_help_l3">L3: L2 に加えて appType を 1000/4/7/4#7 に拡張。既存フィールドのみ変更し、checkImportance は変更しません。</string>
+    <string name="quick_suppress_timing_help_disabled">凍結タイミング同期は無効です。</string>
+    <string name="quick_preview_suppress_basic">保留: 優待/除外リストを解除し、シーン凍結対象を追加しました。</string>
+    <string name="quick_preview_suppress_with_timing">一時保存: 優待/免除リストを削除してシーン凍結対象へ追加し、さらに freezeInterval の主要な凍結パラメータを 0 に同期しました（グローバル高リスク）。</string>
+    <string name="quick_suppress_timing_profile_l1">L1（保守プリセット）: highExtremeMode + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l2">L2（標準プリセット）: highExtreme/extreme/highPerf/highLoad + appType=1000</string>
+    <string name="quick_suppress_timing_profile_l3">L3（強攻プリセット）: L2 + appType=1000/4/7/4#7</string>
+    <string name="quick_suppress_timing_profile_l1_short">L1</string>
+    <string name="quick_suppress_timing_profile_l2_short">L2</string>
+    <string name="quick_suppress_timing_profile_l3_short">L3</string>
+    <string name="quick_preview_suppress_with_timing_profile">保留: 優待/除外リストを解除し、シーン凍結対象を追加。さらに「%1$s」タイミングプリセットを適用（全体・高リスク）。</string>
+    <string name="policy_group_multiple_unsupported">複数のポリシーグループが検出されました。サイレントな部分書き込みを避けるため、適用はブロックされました。</string>
+
+    <string name="module_fast_freeze_title">Fast Freeze（高速凍結）</string>
+    <string name="module_fast_freeze_desc">どのアプリを高速凍結の対象外にするかを制御し、常駐挙動への誤傷を避けます。</string>
+    <string name="module_whitelist_title">Critical Allow / Whitelist（重要許可 / ホワイトリスト）</string>
+    <string name="module_whitelist_desc">IM や CPU などの重要なグローバル優先 / 免除リストを集中的に管理します。</string>
+    <string name="module_sys_black_title">Sys Black Governance（システム黒管制）</string>
+    <string name="module_sys_black_desc">画面オン / 画面オフ / 夜間などのシーンを使って、対象アプリにより厳しい凍結制御を適用します。</string>
+    <string name="module_proxy_title">Proxy / Batch（プロキシ / バッチ）</string>
+    <string name="module_proxy_desc">プロキシ切り替え、既定のブロードキャスト動作、バッチルールの入口をまとめます。</string>
+    <string name="module_bump_title">Unfreeze / Bump（解凍 / Bump）</string>
+    <string name="module_bump_desc">Service の解凍理由とフォールバック規則を設定し、誤凍結を減らします。</string>
+    <string name="module_high_load_title">High Load / Strict / Quota（高負荷 / 厳格制御 / クォータ）</string>
+    <string name="module_high_load_desc">高負荷および厳格制御シナリオ向けです。慎重に使用してください。</string>
+    <string name="module_action_config">Configure</string>
+    <string name="module_action_advanced">Advanced</string>
+    <string name="module_supported">Supported</string>
+    <string name="module_not_supported">Not supported</string>
+    <string name="module_parsed_editable">Parsed / editable</string>
+    <string name="module_not_supported_ff">Current policy does not support ffPkg.black</string>
+    <string name="module_menu_fast_freeze_skip">Skip fast freeze list (ffPkg.black)</string>
+    <string name="module_menu_fast_freeze_explain">Inspect and locate fast-freeze related parameters (Advanced)</string>
+    <string name="module_menu_whitelist_donot">Global priority &amp; exemptions (DoNotFreeze)</string>
+    <string name="module_menu_whitelist_white100">whitePkg (third-party whitelist, category=100)</string>
+    <string name="module_menu_whitelist_im">IM special list (imPkg)</string>
+    <string name="module_menu_whitelist_cpuctl">CPU control whitelist (cpuCtlWhiteList)</string>
+    <string name="module_menu_whitelist_appcard">AppCard ignore list (appCard.ignoreApp)</string>
+    <string name="module_menu_whitelist_keep_alive">Keep alive quick action</string>
+    <string name="module_menu_sys_black_quick">今すぐ抑制</string>
+    <string name="module_menu_sys_black_lcdon">シーンで凍結対象に追加: 画面オン（lcdon）</string>
+    <string name="module_menu_sys_black_lcdoff">シーンで凍結対象に追加: 画面オフ（lcdoff）</string>
+    <string name="module_menu_sys_black_night">シーンで凍結対象に追加: 夜間（night）</string>
+    <string name="module_menu_sys_black_policy">Scenario params (SysBlackPolicy/RestrictMask)</string>
+    <string name="module_menu_proxy_global">（高度）プロキシ全体のスイッチとパラメータ (proxyConfig)</string>
+    <string name="module_menu_proxy_default_bc">（高度）既定のプロキシブロードキャスト (defaultProxyBc)</string>
+    <string name="module_menu_proxy_exclude">（高度）ブロードキャスト除外ルール (proxyBcExcludeAction/Rules)</string>
+    <string name="module_menu_proxy_bundle">（高度）Wakelock / GPS / Sensor / Binder / BtScan</string>
+    <string name="module_menu_bump_service">Service unfreeze reasons (serviceBumpUnFzReasonList)</string>
+    <string name="module_menu_bump_rules">Hard rules: prevent/allow (high risk)</string>
+    <string name="module_menu_bump_traffic">Network fallback (trafficConfig)</string>
+    <string name="module_menu_highload_loading">High-loading detection (high-loading)</string>
+    <string name="module_menu_highload_cpuctl">CPU anomaly control (cpuCtlRus)</string>
+    <string name="module_menu_highload_android_freeze">AOSP Freeze linkage (android-freeze)</string>
+    <string name="module_menu_highload_quota">Task quota (appQuotaConfig)</string>
+    <string name="module_menu_highload_strict">StrictMode switch (enable only)</string>
+    <string name="module_summary_fast_freeze">skip fastfreeze: %1$d apps; ffPkg.black: %2$s</string>
+    <string name="module_summary_whitelist">DoNotFreeze=%1$d; whitePkg(100)=%2$d; IM=%3$d; CPU=%4$d; AppCard=%5$d</string>
+    <string name="module_summary_sys_black">lcdon=%1$d; lcdoff=%2$d; night=%3$d</string>
+    <string name="module_summary_proxy">proxyConfig: %1$s; rules: %2$d</string>
+    <string name="module_summary_bump">serviceBump=%1$d; prevent=%2$d; allow=%3$d</string>
+    <string name="module_summary_high_load">high-loading=%1$s; android-freeze=%2$s; quota(max)=%3$s</string>
+
+    <string name="enabled">有効</string>
+    <string name="disabled">無効</string>
+
+
+    <string name="module_detail_open_advanced">View all advanced items</string>
+    <string name="close">Close</string>
+    <string name="expand">Expand</string>
+    <string name="collapse">Collapse</string>
+
+    <string name="section_enable_config_title">全体トグル (enableConfig)</string>
+    <string name="section_enable_config_body">hans / gms などの全体スイッチに影響します。変更は慎重に行ってください。</string>
+    <string name="section_whitelist_title">重要許可 / ホワイトリスト（凍結判定に影響）</string>
+    <string name="section_whitelist_body">doNotFreeze / whitePkg / imPkg / cpuCtl / appCard / gms / ffPkg.black に対応します。</string>
+    <string name="section_pkg_config_title">パッケージ単位の上書き：機能セット (pkgConfig)【開発者向け】</string>
+    <string name="section_pkg_config_body">パッケージ単位でスイッチやビットマスクを上書きします。展開すると実際のノード名と主要属性を確認できます。</string>
+    <string name="section_binder_title">コンポーネント / Binder ルール【開発者向け】</string>
+    <string name="section_binder_body">プロキシ Binder と非同期コールバックを制御し、バックグラウンド起床とコールバック嵐を減らします。</string>
+    <string name="section_extreme_title">解凍 / Bump / 高負荷 / クォータ</string>
+    <string name="section_extreme_body">prevent / allow / serviceBump / high-loading / android-freeze / appQuota / strictMode などの高リスク項目を含みます。</string>
+    <string name="proxy_semantic_title">プロキシ / バッチ（起床回数を減らす）</string>
+    <string name="proxy_semantic_body">proxyConfig / defaultProxyBc / proxySensor / proxyGps / proxyBtScan / proxyBinder を含みます。</string>
+    <string name="policy_section_title">シナリオテンプレートと制限マスクの説明</string>
+    <string name="policy_section_body">SysBlackApp のシナリオ命中に対する上限を制御します。開発者向け項目で、一部のフィールドは高度編集が必要です。</string>
+    <string name="policy_template_title">シナリオテンプレート: %1$s (scene=%2$s)</string>
+    <string name="policy_mask_title">制限マスク: %1$s</string>
+    <string name="policy_technical_detail">group=%1$s</string>
+
+    <string name="module_detail_fast_freeze_skip_desc">Edit ffPkg type=black to skip fast freeze for selected packages.</string>
+    <string name="module_detail_whitelist_donot_desc">Edit DoNotFreeze exemption list.</string>
+    <string name="module_detail_whitelist_white100_desc">Edit whitePkg category=100 (third-party whitelist).</string>
+    <string name="module_detail_whitelist_im_desc">Edit IM special list (imPkg).</string>
+    <string name="module_detail_whitelist_cpuctl_desc">Edit CPUCtl whitelist (cpuCtlWhiteList).</string>
+    <string name="module_detail_whitelist_appcard_desc">Edit AppCard ignore list (appCard.ignoreApp).</string>
+    <string name="module_detail_whitelist_keepalive_desc">Quick Keep alive action.</string>
+    <string name="module_detail_sys_black_quick_desc">Open Suppress now quick action.</string>
+    <string name="module_detail_sys_black_lcdon_desc">Edit scene list: lcdon.</string>
+    <string name="module_detail_sys_black_lcdoff_desc">Edit scene list: lcdoff.</string>
+    <string name="module_detail_sys_black_night_desc">Edit scene list: night.</string>
+    <string name="module_detail_sys_black_policy_desc">Inspect advanced SysBlackPolicy/RestrictMask params.</string>
+    <string name="module_detail_proxy_global_desc">proxyConfig の全体パラメータを確認・編集します（高度編集）。</string>
+    <string name="module_detail_proxy_default_bc_desc">defaultProxyBc のブロードキャスト動作を確認・編集します（高度編集）。</string>
+    <string name="module_detail_proxy_bundle_desc">proxySensor / proxyGps / proxyBtScan / proxyBinder などの機能を確認します（高度編集）。</string>
+    <string name="module_detail_bump_service_desc">Edit serviceBumpUnFzReasonList (high risk).</string>
+    <string name="module_detail_bump_prevent_desc">Edit prevent scene rules (high risk).</string>
+    <string name="module_detail_bump_allow_title">allow scene rules</string>
+    <string name="module_detail_bump_allow_desc">Edit allow scene rules (high risk).</string>
+    <string name="module_detail_bump_traffic_desc">trafficConfig has no dedicated editor yet; use the Advanced section.</string>
+    <string name="module_detail_high_load_loading_desc">Edit high-loading detection (high risk).</string>
+    <string name="module_detail_high_load_cpuctl_desc">Edit cpuCtlRus (high risk).</string>
+    <string name="module_detail_high_load_android_freeze_desc">Edit android-freeze linkage (high risk).</string>
+    <string name="module_detail_high_load_quota_desc">Edit appQuotaConfig (high risk).</string>
+    <string name="module_detail_high_load_strict_desc">Only edits strictMode enable; does not modify level.</string>
+
+
+    <string name="list_editor_import_clipboard">クリップボードからインポート</string>
+    <string name="list_editor_sort">並べ替え</string>
+    <string name="list_editor_clear">クリア</string>
+    <string name="staged_ok_count">一時保存済み: %1$d 件</string>
+    <string name="list_editor_save">一時保存</string>
+    <string name="list_editor_edit_item">項目を編集</string>
+    <string name="list_editor_delete_item">項目を削除</string>
+    <string name="list_editor_clipboard_empty">クリップボードが空です</string>
+    <string name="list_editor_desc_service_bump">1行に1つの理由（例: bind/create/start）。任意の値を入力できます</string>
+    <string name="list_editor_desc_plain_tokens">1行に1つのトークン。複数行貼り付け対応、重複は削除されます</string>
+    <string name="list_editor_desc_key_value_with_sample">key=value 形式で入力してください（例: %1$s）</string>
+    <string name="list_editor_desc_csv_rule_with_sample">scene,pkg,mask,version,code 形式（pkg は必須）。例: %1$s</string>
+    <string name="list_editor_invalid_lines_count">無効な入力が %1$d 行あります</string>
+    <string name="list_editor_invalid_key_value_missing_equal">%1$d行目: = がありません: %2$s</string>
+    <string name="list_editor_invalid_key_value_empty_key">%1$d行目: key が空です: %2$s</string>
+    <string name="list_editor_invalid_csv_too_few_columns">%1$d行目: CSV 列が不足しています（2列以上必要）: %2$s</string>
+    <string name="list_editor_invalid_csv_pkg_required">%1$d行目: pkg は必須です: %2$s</string>
+    <string name="list_editor_desc_android_freeze_mixed_format">このページは2種類の形式をサポートします:
+スイッチ: key=value（enable/whiteEnable/killWhiteEnable/sysAppExemptEnable のみ、true/false）
+除外クォータ: pkg[,bgMode]（例: com.oplus.camera,256）</string>
+    <string name="list_editor_invalid_android_freeze_unknown_key">%1$d行目: 不明なスイッチキー（%2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_boolean">%1$d行目: スイッチ値は true/false である必要があります（現在: %2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_quota_columns">%1$d行目: 除外クォータ形式が不正です（pkg または pkg,bgMode のみ）: %2$s</string>
+    <string name="list_editor_invalid_android_freeze_invalid_pkg">%1$d行目: 除外クォータの pkg が不正です（現在: %2$s）</string>
+    <string name="list_editor_invalid_android_freeze_invalid_bgmode">%1$d行目: 除外クォータの bgMode は数字のみです（現在: %2$s）</string>
+    <string name="edit_invalid_all_ignored">入力がすべて無効のため、変更は無視され既存の一時保存設定を保持しました</string>
+    <string name="list_editor_import_result">%1$d 件を取り込みました</string>
+    <string name="about_section_title">概要</string>
+    <string name="about_version_label">バージョン: </string>
+    <string name="about_author_label">作者: </string>
+    <string name="author_name">Astor</string>
+    <string name="editor_spec_self_check_warning">開発者チェック: 現在の設定が検証結果と一致しません。ログを確認してください。</string>
+    <string name="hook_config_source_value">Hook 設定ソース: %1$s</string>
+    <string name="hook_master_resolved_value">Master: %1$s (source=%2$s)</string>
+    <string name="hook_autostart_resolved_value">Autostart: %1$s (source=%2$s)</string>
+    <string name="hook_tombstone_resolved_value">Tombstone: %1$s (source=%2$s)</string>
+    <string name="hook_user_fact_value">ユーザー設定ファクト: %1$s (%2$s)</string>
+    <string name="proxy_binder_desc_help">各行: desc=pkg1|pkg2 (pkg は * ワイルドカード対応、内部区切りは #)。</string>
+    <string name="settings_diag_group">診断（読み取り専用）</string>
+    <string name="settings_experiments_group">実験機能（段階展開）</string>
+    <string name="allow_pm_readconfig_observe">Phone Manager: readConfig を監視のみ</string>
+    <string name="allow_pm_readconfig_modify">Phone Manager: readConfig 置換を許可（実験的）</string>
+    <string name="allow_pm_fs_hook">Phone Manager: FS hook を許可（高リスク）</string>
+    <string name="allow_sc_readconfig_observe">Safe Center: readConfig を監視のみ</string>
+    <string name="allow_sc_readconfig_modify">Safe Center: readConfig 置換を許可（実験的）</string>
+    <string name="allow_sc_fs_hook">Safe Center: FS hook を許可（高リスク）</string>
+    <string name="cleanup_system_state_title">システム永続設定をクリア</string>
+    <string name="cleanup_system_state_message">persist.opch.* システムプロパティと /data/local/tmp/oplusconfighook の残存ファイルを削除します。
+Root 権限が必要です。
+
+アプリ内設定は削除されません。反映にはポリシー再適用または再起動が必要です。</string>
+    <string name="cleanup_system_state_continue">続行してクリア</string>
+    <string name="cleanup_system_state_running">クリア中…</string>
+    <string name="cleanup_system_state_button">システム永続設定をクリア（Root 必須）</string>
+    <string name="cleanup_system_state_hint">再インストール後に persist プロパティと外部設定の残骸を削除します。アプリ内設定は削除しません。</string>
+    <string name="cleanup_system_state_result">クリア完了: %1$d/%2$d（システムプロパティ + 外部ファイル）。再適用または再起動してください。</string>
+    <string name="editor_render_failed_reopen">エディタの描画に失敗しました。再度開いてください。</string>
+    <string name="editor_submit_host_not_found">送信できません: ホストが見つかりません。</string>
+    <string name="proxy_config_enable">config.enable</string>
+    <string name="proxy_sensor_proxy_pkg_hint">proxyPkg（1 行に 1 パッケージ、送信時に | で結合）</string>
+    <string name="proxy_sensor_proxy_type_hint">proxyType（1 行に 1 typeName）</string>
+    <string name="proxy_sensor_white_type_pkg_hint">whiteTypePkg（1 行: type=pkg1|pkg2）</string>
+    <string name="proxy_sensor_invalid_proxy_pkg">proxyPkg に無効なパッケージ: %1$s</string>
+    <string name="proxy_sensor_invalid_white_type_pkg">whiteTypePkg に無効なパッケージ: %1$s</string>
+    <string name="proxy_binder_invalid_pkg">descConfig に無効なパッケージ: %1$s</string>
+    <string name="scene_token_lcdon">lcdon</string>
+    <string name="scene_token_lcdoff">lcdoff</string>
+    <string name="scene_token_night">night</string>
+    <string name="proxy_occurrence_suffix">（出現箇所=%1$d、更新予定=%2$d）</string>
+    <string name="proxy_sensor_summary">有効=%1$s、proxyType=%2$s、proxyPkg=%3$s、type数=%4$d、whiteRules=%5$d%6$s</string>
+    <string name="proxy_binder_summary">有効=%1$s、descRules=%2$d%3$s</string>
+</resources>
