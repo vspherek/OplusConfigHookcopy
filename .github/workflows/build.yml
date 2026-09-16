@@ -18,23 +18,9 @@ jobs:
           java-version: '17'
           cache: gradle
 
-      # ========== 删掉原来的 android-actions/setup-android，替换为下面手动安装SDK ==========
-      - name: Install Android SDK Commandline Tools
-        run: |
-          sudo apt update && sudo apt install -y unzip
-          mkdir -p $HOME/android-sdk/cmdline-tools
-          wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O cmdline.zip
-          unzip -q cmdline.zip -d $HOME/android-sdk/cmdline-tools
-          mv $HOME/android-sdk/cmdline-tools/cmdline-tools $HOME/android-sdk/cmdline-tools/latest
-        env:
-          ANDROID_SDK_ROOT: $HOME/android-sdk
-
-      - name: Set Android SDK env
-        run: echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
-
+      # 直接使用系统自带SDK，不再执行setup-android
       - name: Accept SDK licenses
-        run: |
-          yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Grant gradlew permission
         run: chmod +x ./gradlew
